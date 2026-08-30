@@ -4,3 +4,9 @@ __pycache__/
 *.pyc
 .DS_Store
 .ipynb_checkpoints/
+.env.*
+!.env.example
+*.key
+*.pem
+secrets.json
+.vscode/
