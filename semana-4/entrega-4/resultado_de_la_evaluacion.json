@@ -1,0 +1,254 @@
+{
+  "Solo palabras clave (BM25)": {
+    "recall_en_5_promedio": 1.0,
+    "precision_en_5_promedio": 0.3666666666666667,
+    "detalle": [
+      {
+        "pregunta": "¿Cuántas palabras puede tener como máximo la monografía?",
+        "documento_id_esperado": "monografia_EE",
+        "documentos_recuperados": [
+          "teoria_del_conocimiento_TOK",
+          "monografia_EE",
+          "reglamento_de_examenes_de_mayo",
+          "reglamento_de_examenes_de_mayo",
+          "evaluacion_interna_IA"
+        ],
+        "recall_en_5": 1.0,
+        "precision_en_5": 0.2
+      },
+      {
+        "pregunta": "¿Qué es el RPPF y cuándo se completa?",
+        "documento_id_esperado": "monografia_EE",
+        "documentos_recuperados": [
+          "monografia_EE",
+          "creatividad_actividad_servicio_CAS",
+          "monografia_EE",
+          "teoria_del_conocimiento_TOK",
+          "evaluacion_interna_IA"
+        ],
+        "recall_en_5": 1.0,
+        "precision_en_5": 0.4
+      },
+      {
+        "pregunta": "¿Cuál es el límite de palabras del ensayo de TOK y cuánto vale en la nota?",
+        "documento_id_esperado": "teoria_del_conocimiento_TOK",
+        "documentos_recuperados": [
+          "teoria_del_conocimiento_TOK",
+          "monografia_EE",
+          "evaluacion_interna_IA",
+          "teoria_del_conocimiento_TOK",
+          "evaluacion_interna_IA"
+        ],
+        "recall_en_5": 1.0,
+        "precision_en_5": 0.4
+      },
+      {
+        "pregunta": "¿Cuánto tiempo dura el programa CAS y hace falta un proyecto?",
+        "documento_id_esperado": "creatividad_actividad_servicio_CAS",
+        "documentos_recuperados": [
+          "creatividad_actividad_servicio_CAS",
+          "creatividad_actividad_servicio_CAS",
+          "monografia_EE",
+          "reglamento_de_examenes_de_mayo",
+          "reglamento_de_examenes_de_mayo"
+        ],
+        "recall_en_5": 1.0,
+        "precision_en_5": 0.4
+      },
+      {
+        "pregunta": "¿Qué pasa si un alumno llega 40 minutos tarde al examen?",
+        "documento_id_esperado": "reglamento_de_examenes_de_mayo",
+        "documentos_recuperados": [
+          "reglamento_de_examenes_de_mayo",
+          "reglamento_de_examenes_de_mayo",
+          "monografia_EE",
+          "creatividad_actividad_servicio_CAS",
+          "creatividad_actividad_servicio_CAS"
+        ],
+        "recall_en_5": 1.0,
+        "precision_en_5": 0.4
+      },
+      {
+        "pregunta": "¿Hasta qué fecha se entregan las IA del segundo año?",
+        "documento_id_esperado": "evaluacion_interna_IA",
+        "documentos_recuperados": [
+          "evaluacion_interna_IA",
+          "evaluacion_interna_IA",
+          "monografia_EE",
+          "reglamento_de_examenes_de_mayo",
+          "creatividad_actividad_servicio_CAS"
+        ],
+        "recall_en_5": 1.0,
+        "precision_en_5": 0.4
+      }
+    ]
+  },
+  "Solo significado (Pinecone)": {
+    "recall_en_5_promedio": 1.0,
+    "precision_en_5_promedio": 0.3333333333333333,
+    "detalle": [
+      {
+        "pregunta": "¿Cuántas palabras puede tener como máximo la monografía?",
+        "documento_id_esperado": "monografia_EE",
+        "documentos_recuperados": [
+          "monografia_EE",
+          "monografia_EE",
+          "teoria_del_conocimiento_TOK",
+          "teoria_del_conocimiento_TOK",
+          "reglamento_de_examenes_de_mayo"
+        ],
+        "recall_en_5": 1.0,
+        "precision_en_5": 0.4
+      },
+      {
+        "pregunta": "¿Qué es el RPPF y cuándo se completa?",
+        "documento_id_esperado": "monografia_EE",
+        "documentos_recuperados": [
+          "monografia_EE",
+          "teoria_del_conocimiento_TOK",
+          "creatividad_actividad_servicio_CAS",
+          "evaluacion_interna_IA",
+          "reglamento_de_examenes_de_mayo"
+        ],
+        "recall_en_5": 1.0,
+        "precision_en_5": 0.2
+      },
+      {
+        "pregunta": "¿Cuál es el límite de palabras del ensayo de TOK y cuánto vale en la nota?",
+        "documento_id_esperado": "teoria_del_conocimiento_TOK",
+        "documentos_recuperados": [
+          "teoria_del_conocimiento_TOK",
+          "monografia_EE",
+          "monografia_EE",
+          "reglamento_de_examenes_de_mayo",
+          "reglamento_de_examenes_de_mayo"
+        ],
+        "recall_en_5": 1.0,
+        "precision_en_5": 0.2
+      },
+      {
+        "pregunta": "¿Cuánto tiempo dura el programa CAS y hace falta un proyecto?",
+        "documento_id_esperado": "creatividad_actividad_servicio_CAS",
+        "documentos_recuperados": [
+          "creatividad_actividad_servicio_CAS",
+          "creatividad_actividad_servicio_CAS",
+          "reglamento_de_examenes_de_mayo",
+          "evaluacion_interna_IA",
+          "reglamento_de_examenes_de_mayo"
+        ],
+        "recall_en_5": 1.0,
+        "precision_en_5": 0.4
+      },
+      {
+        "pregunta": "¿Qué pasa si un alumno llega 40 minutos tarde al examen?",
+        "documento_id_esperado": "reglamento_de_examenes_de_mayo",
+        "documentos_recuperados": [
+          "reglamento_de_examenes_de_mayo",
+          "reglamento_de_examenes_de_mayo",
+          "evaluacion_interna_IA",
+          "teoria_del_conocimiento_TOK",
+          "creatividad_actividad_servicio_CAS"
+        ],
+        "recall_en_5": 1.0,
+        "precision_en_5": 0.4
+      },
+      {
+        "pregunta": "¿Hasta qué fecha se entregan las IA del segundo año?",
+        "documento_id_esperado": "evaluacion_interna_IA",
+        "documentos_recuperados": [
+          "evaluacion_interna_IA",
+          "reglamento_de_examenes_de_mayo",
+          "teoria_del_conocimiento_TOK",
+          "evaluacion_interna_IA",
+          "reglamento_de_examenes_de_mayo"
+        ],
+        "recall_en_5": 1.0,
+        "precision_en_5": 0.4
+      }
+    ]
+  },
+  "Híbrido (EnsembleRetriever = BM25 + Pinecone)": {
+    "recall_en_5_promedio": 1.0,
+    "precision_en_5_promedio": 0.4000000000000001,
+    "detalle": [
+      {
+        "pregunta": "¿Cuántas palabras puede tener como máximo la monografía?",
+        "documento_id_esperado": "monografia_EE",
+        "documentos_recuperados": [
+          "monografia_EE",
+          "teoria_del_conocimiento_TOK",
+          "reglamento_de_examenes_de_mayo",
+          "monografia_EE",
+          "reglamento_de_examenes_de_mayo"
+        ],
+        "recall_en_5": 1.0,
+        "precision_en_5": 0.4
+      },
+      {
+        "pregunta": "¿Qué es el RPPF y cuándo se completa?",
+        "documento_id_esperado": "monografia_EE",
+        "documentos_recuperados": [
+          "monografia_EE",
+          "monografia_EE",
+          "creatividad_actividad_servicio_CAS",
+          "teoria_del_conocimiento_TOK",
+          "creatividad_actividad_servicio_CAS"
+        ],
+        "recall_en_5": 1.0,
+        "precision_en_5": 0.4
+      },
+      {
+        "pregunta": "¿Cuál es el límite de palabras del ensayo de TOK y cuánto vale en la nota?",
+        "documento_id_esperado": "teoria_del_conocimiento_TOK",
+        "documentos_recuperados": [
+          "teoria_del_conocimiento_TOK",
+          "monografia_EE",
+          "teoria_del_conocimiento_TOK",
+          "monografia_EE",
+          "evaluacion_interna_IA"
+        ],
+        "recall_en_5": 1.0,
+        "precision_en_5": 0.4
+      },
+      {
+        "pregunta": "¿Cuánto tiempo dura el programa CAS y hace falta un proyecto?",
+        "documento_id_esperado": "creatividad_actividad_servicio_CAS",
+        "documentos_recuperados": [
+          "creatividad_actividad_servicio_CAS",
+          "creatividad_actividad_servicio_CAS",
+          "reglamento_de_examenes_de_mayo",
+          "reglamento_de_examenes_de_mayo",
+          "monografia_EE"
+        ],
+        "recall_en_5": 1.0,
+        "precision_en_5": 0.4
+      },
+      {
+        "pregunta": "¿Qué pasa si un alumno llega 40 minutos tarde al examen?",
+        "documento_id_esperado": "reglamento_de_examenes_de_mayo",
+        "documentos_recuperados": [
+          "reglamento_de_examenes_de_mayo",
+          "reglamento_de_examenes_de_mayo",
+          "creatividad_actividad_servicio_CAS",
+          "monografia_EE",
+          "evaluacion_interna_IA"
+        ],
+        "recall_en_5": 1.0,
+        "precision_en_5": 0.4
+      },
+      {
+        "pregunta": "¿Hasta qué fecha se entregan las IA del segundo año?",
+        "documento_id_esperado": "evaluacion_interna_IA",
+        "documentos_recuperados": [
+          "evaluacion_interna_IA",
+          "evaluacion_interna_IA",
+          "reglamento_de_examenes_de_mayo",
+          "reglamento_de_examenes_de_mayo",
+          "monografia_EE"
+        ],
+        "recall_en_5": 1.0,
+        "precision_en_5": 0.4
+      }
+    ]
+  }
+}

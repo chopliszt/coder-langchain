@@ -72,6 +72,17 @@ Serverless** (significado), fusionadas con `EnsembleRetriever`. Se mide con **Re
 - **Precision@5**: ¿qué porcentaje de los 5 resultados viene del documento correcto? Cada documento tiene **2 fragmentos**, así que el
   **máximo posible es 2/5 = 40%**. Una Precision@5 de 40% es perfecta para este dataset.
 
-## Resultados
+## Resultados (ejecución real contra Pinecone)
 
-Ver [`resultado_de_la_evaluacion.json`](resultado_de_la_evaluacion.json) y la salida de consola de `evaluate.py`.
+| Estrategia | Recall@5 | Precision@5 |
+|---|---|---|
+| Solo palabras clave (BM25) | 100% | 37% |
+| Solo significado (Pinecone) | 100% | 33% |
+| **Híbrido (EnsembleRetriever)** | **100%** | **40%** (el máximo posible: 2 fragmentos por documento) |
+
+**Lectura:** las tres estrategias encuentran siempre el documento correcto (Recall@5 = 100%), pero el híbrido trae
+**menos ruido**: en todas las preguntas los 2 fragmentos del documento correcto quedan dentro del top 5. Por ejemplo,
+en *"¿Qué es el RPPF?"* el vectorial solo trajo 1 fragmento de la monografía, y BM25 (que reconoce la sigla exacta
+"RPPF") ayudó al híbrido a traer los 2.
+
+Detalle completo: [`salida_de_la_evaluacion.txt`](salida_de_la_evaluacion.txt) y [`resultado_de_la_evaluacion.json`](resultado_de_la_evaluacion.json).

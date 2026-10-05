@@ -1,0 +1,88 @@
+
+=== Solo palabras clave (BM25) ===
+[OK ] ¿Cuántas palabras puede tener como máximo la monografía?
+      esperado: monografia_EE
+      top 5:    ['teoria_del_conocimiento_TOK', 'monografia_EE', 'reglamento_de_examenes_de_mayo', 'reglamento_de_examenes_de_mayo', 'evaluacion_interna_IA']
+      Recall@5 = 100% | Precision@5 = 20%
+[OK ] ¿Qué es el RPPF y cuándo se completa?
+      esperado: monografia_EE
+      top 5:    ['monografia_EE', 'creatividad_actividad_servicio_CAS', 'monografia_EE', 'teoria_del_conocimiento_TOK', 'evaluacion_interna_IA']
+      Recall@5 = 100% | Precision@5 = 40%
+[OK ] ¿Cuál es el límite de palabras del ensayo de TOK y cuánto vale en la nota?
+      esperado: teoria_del_conocimiento_TOK
+      top 5:    ['teoria_del_conocimiento_TOK', 'monografia_EE', 'evaluacion_interna_IA', 'teoria_del_conocimiento_TOK', 'evaluacion_interna_IA']
+      Recall@5 = 100% | Precision@5 = 40%
+[OK ] ¿Cuánto tiempo dura el programa CAS y hace falta un proyecto?
+      esperado: creatividad_actividad_servicio_CAS
+      top 5:    ['creatividad_actividad_servicio_CAS', 'creatividad_actividad_servicio_CAS', 'monografia_EE', 'reglamento_de_examenes_de_mayo', 'reglamento_de_examenes_de_mayo']
+      Recall@5 = 100% | Precision@5 = 40%
+[OK ] ¿Qué pasa si un alumno llega 40 minutos tarde al examen?
+      esperado: reglamento_de_examenes_de_mayo
+      top 5:    ['reglamento_de_examenes_de_mayo', 'reglamento_de_examenes_de_mayo', 'monografia_EE', 'creatividad_actividad_servicio_CAS', 'creatividad_actividad_servicio_CAS']
+      Recall@5 = 100% | Precision@5 = 40%
+[OK ] ¿Hasta qué fecha se entregan las IA del segundo año?
+      esperado: evaluacion_interna_IA
+      top 5:    ['evaluacion_interna_IA', 'evaluacion_interna_IA', 'monografia_EE', 'reglamento_de_examenes_de_mayo', 'creatividad_actividad_servicio_CAS']
+      Recall@5 = 100% | Precision@5 = 40%
+  >> Recall@5 promedio: 100% | Precision@5 promedio: 37%
+
+=== Solo significado (Pinecone) ===
+[OK ] ¿Cuántas palabras puede tener como máximo la monografía?
+      esperado: monografia_EE
+      top 5:    ['monografia_EE', 'monografia_EE', 'teoria_del_conocimiento_TOK', 'teoria_del_conocimiento_TOK', 'reglamento_de_examenes_de_mayo']
+      Recall@5 = 100% | Precision@5 = 40%
+[OK ] ¿Qué es el RPPF y cuándo se completa?
+      esperado: monografia_EE
+      top 5:    ['monografia_EE', 'teoria_del_conocimiento_TOK', 'creatividad_actividad_servicio_CAS', 'evaluacion_interna_IA', 'reglamento_de_examenes_de_mayo']
+      Recall@5 = 100% | Precision@5 = 20%
+[OK ] ¿Cuál es el límite de palabras del ensayo de TOK y cuánto vale en la nota?
+      esperado: teoria_del_conocimiento_TOK
+      top 5:    ['teoria_del_conocimiento_TOK', 'monografia_EE', 'monografia_EE', 'reglamento_de_examenes_de_mayo', 'reglamento_de_examenes_de_mayo']
+      Recall@5 = 100% | Precision@5 = 20%
+[OK ] ¿Cuánto tiempo dura el programa CAS y hace falta un proyecto?
+      esperado: creatividad_actividad_servicio_CAS
+      top 5:    ['creatividad_actividad_servicio_CAS', 'creatividad_actividad_servicio_CAS', 'reglamento_de_examenes_de_mayo', 'evaluacion_interna_IA', 'reglamento_de_examenes_de_mayo']
+      Recall@5 = 100% | Precision@5 = 40%
+[OK ] ¿Qué pasa si un alumno llega 40 minutos tarde al examen?
+      esperado: reglamento_de_examenes_de_mayo
+      top 5:    ['reglamento_de_examenes_de_mayo', 'reglamento_de_examenes_de_mayo', 'evaluacion_interna_IA', 'teoria_del_conocimiento_TOK', 'creatividad_actividad_servicio_CAS']
+      Recall@5 = 100% | Precision@5 = 40%
+[OK ] ¿Hasta qué fecha se entregan las IA del segundo año?
+      esperado: evaluacion_interna_IA
+      top 5:    ['evaluacion_interna_IA', 'reglamento_de_examenes_de_mayo', 'teoria_del_conocimiento_TOK', 'evaluacion_interna_IA', 'reglamento_de_examenes_de_mayo']
+      Recall@5 = 100% | Precision@5 = 40%
+  >> Recall@5 promedio: 100% | Precision@5 promedio: 33%
+
+=== Híbrido (EnsembleRetriever = BM25 + Pinecone) ===
+[OK ] ¿Cuántas palabras puede tener como máximo la monografía?
+      esperado: monografia_EE
+      top 5:    ['monografia_EE', 'teoria_del_conocimiento_TOK', 'reglamento_de_examenes_de_mayo', 'monografia_EE', 'reglamento_de_examenes_de_mayo']
+      Recall@5 = 100% | Precision@5 = 40%
+[OK ] ¿Qué es el RPPF y cuándo se completa?
+      esperado: monografia_EE
+      top 5:    ['monografia_EE', 'monografia_EE', 'creatividad_actividad_servicio_CAS', 'teoria_del_conocimiento_TOK', 'creatividad_actividad_servicio_CAS']
+      Recall@5 = 100% | Precision@5 = 40%
+[OK ] ¿Cuál es el límite de palabras del ensayo de TOK y cuánto vale en la nota?
+      esperado: teoria_del_conocimiento_TOK
+      top 5:    ['teoria_del_conocimiento_TOK', 'monografia_EE', 'teoria_del_conocimiento_TOK', 'monografia_EE', 'evaluacion_interna_IA']
+      Recall@5 = 100% | Precision@5 = 40%
+[OK ] ¿Cuánto tiempo dura el programa CAS y hace falta un proyecto?
+      esperado: creatividad_actividad_servicio_CAS
+      top 5:    ['creatividad_actividad_servicio_CAS', 'creatividad_actividad_servicio_CAS', 'reglamento_de_examenes_de_mayo', 'reglamento_de_examenes_de_mayo', 'monografia_EE']
+      Recall@5 = 100% | Precision@5 = 40%
+[OK ] ¿Qué pasa si un alumno llega 40 minutos tarde al examen?
+      esperado: reglamento_de_examenes_de_mayo
+      top 5:    ['reglamento_de_examenes_de_mayo', 'reglamento_de_examenes_de_mayo', 'creatividad_actividad_servicio_CAS', 'monografia_EE', 'evaluacion_interna_IA']
+      Recall@5 = 100% | Precision@5 = 40%
+[OK ] ¿Hasta qué fecha se entregan las IA del segundo año?
+      esperado: evaluacion_interna_IA
+      top 5:    ['evaluacion_interna_IA', 'evaluacion_interna_IA', 'reglamento_de_examenes_de_mayo', 'reglamento_de_examenes_de_mayo', 'monografia_EE']
+      Recall@5 = 100% | Precision@5 = 40%
+  >> Recall@5 promedio: 100% | Precision@5 promedio: 40%
+
+=== RESUMEN ===
+Solo palabras clave (BM25)                       Recall@5 100%   Precision@5 37%
+Solo significado (Pinecone)                      Recall@5 100%   Precision@5 33%
+Híbrido (EnsembleRetriever = BM25 + Pinecone)    Recall@5 100%   Precision@5 40%
+
+Reporte guardado en resultado_de_la_evaluacion.json
