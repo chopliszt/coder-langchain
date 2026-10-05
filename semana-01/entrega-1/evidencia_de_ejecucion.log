@@ -1,0 +1,24 @@
+--- Validación con Pydantic ---
+❌ Se detectó ANTES de llamar a la API:
+ 1 validation error for LLMConfig
+temperature
+  Input should be less than or equal to 2 [type=less_than_equal, input_value=5, input_type=int]
+    For further information visit https://errors.pydantic.dev/2.13/v/less_than_equal
+⏭️  Anthropic: falta ANTHROPIC_API_KEY en el .env, se saltea.
+
+--- Modo normal ---
+🟢 OpenAI: ❌ Error de la API de OpenAI: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-real-key. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'code': 'invalid_api_key', 'param': None}, 'status': 401}
+🔵 Gemini: La entropía es una medida del desorden o la aleatoriedad en un sistema físico. Según la termodinámica, tiende a aumentar siempre en el universo, lo que significa que los procesos naturales van irreversiblemente del orden al caos.
+
+--- Modo streaming ---
+
+🟢 Streaming OpenAI:
+
+[⚠️ Error durante el streaming: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-real-key. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'code': 'invalid_api_key', 'param': None}, 'status': 401}]
+
+🔵 Streaming Gemini:
+La entropía es una medida del grado de desorden o aleatoriedad en un sistema físico. Según la física, tiende a aumentar siempre con el tiempo en el universo.
+
+--- Prueba de resiliencia ---
+¿El programa siguió vivo?: ✅ Sí
+Error capturado (sin crash): Error de la API de OpenAI: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-key-i***************sito. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'code': 'invalid_api_key', 'param': None}, 'status': 401}

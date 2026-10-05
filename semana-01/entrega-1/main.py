@@ -20,7 +20,7 @@ async def demo_validacion() -> None:
     """Muestra que Pydantic frena datos inválidos ANTES de gastar una sola llamada a la API."""
     print("--- Validación con Pydantic ---")
     try:
-        LLMConfig(provider=Provider.OPENAI, model="gpt-4o-mini", temperature=5)
+        LLMConfig(provider=Provider.OPENAI, model="gpt-4.1-mini", temperature=5)
     except ValidationError as e:
         print("❌ Se detectó ANTES de llamar a la API:\n", e)
 
@@ -42,7 +42,7 @@ async def demo_resiliencia() -> None:
     """Prueba que una API key inválida no tira abajo el programa entero."""
     config_rota = LLMConfig(
         provider=Provider.OPENAI,
-        model="gpt-4o-mini",
+        model="gpt-4.1-mini",
         openai_api_key=SecretStr("sk-key-invalida-a-proposito"),
     )
     manager_roto = AsyncLLMManager(config_rota)
@@ -62,9 +62,9 @@ async def main() -> None:
     # Solo se arman los proveedores cuya API key esté realmente en el .env:
     # sin key, se saltea con un aviso en vez de romper todo el programa.
     proveedores = [
-        (Provider.OPENAI, "gpt-4o-mini", "OPENAI_API_KEY", "openai_api_key", "OpenAI", "🟢"),
-        (Provider.ANTHROPIC, "claude-sonnet-5", "ANTHROPIC_API_KEY", "anthropic_api_key", "Anthropic", "🟣"),
-        (Provider.GEMINI, "gemini-flash-latest", "GOOGLE_API_KEY", "google_api_key", "Gemini", "🔵"),
+        (Provider.OPENAI, os.getenv("MODELO_OPENAI", "gpt-4.1-mini"), "OPENAI_API_KEY", "openai_api_key", "OpenAI", "🟢"),
+        (Provider.ANTHROPIC, os.getenv("MODELO_ANTHROPIC", "claude-opus-5-5"), "ANTHROPIC_API_KEY", "anthropic_api_key", "Anthropic", "🟣"),
+        (Provider.GEMINI, os.getenv("MODELO_GEMINI", "gemini-flash-lite-latest"), "GOOGLE_API_KEY", "google_api_key", "Gemini", "🔵"),
     ]
 
     activos = []
@@ -77,7 +77,7 @@ async def main() -> None:
             "provider": provider,
             "model": modelo,
             campo_key: SecretStr(api_key),
-            "max_tokens": 200,
+            "max_tokens": 1024,
         })
         activos.append((AsyncLLMManager(config), nombre, emoji))
 

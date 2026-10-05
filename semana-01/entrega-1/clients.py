@@ -96,13 +96,12 @@ class AnthropicClient(BaseLLMClient):
             response = await self._client.messages.create(
                 model=self.model,
                 max_tokens=self.max_tokens,  # obligatorio en Anthropic, a diferencia de OpenAI
-                temperature=self.temperature,
                 messages=[m.model_dump() for m in messages],
             )
             return ModelResponse(
                 provider=Provider.ANTHROPIC,
                 model=self.model,
-                content=response.content[0].text,
+                content="".join(bloque.text for bloque in response.content if bloque.type == "text"),
             )
         except AnthropicRateLimitError as e:
             return ModelResponse(provider=Provider.ANTHROPIC, model=self.model, content="",
@@ -119,7 +118,6 @@ class AnthropicClient(BaseLLMClient):
             async with self._client.messages.stream(
                 model=self.model,
                 max_tokens=self.max_tokens,
-                temperature=self.temperature,
                 messages=[m.model_dump() for m in messages],
             ) as stream:
                 async for texto in stream.text_stream:
