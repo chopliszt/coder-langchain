@@ -14,3 +14,4 @@ context.txt
 
 # Bases vectoriales locales (se regeneran con ingest.py)
 semana-3/entrega-3/vectorstore/
+semana-5/entrega-5/checkpoints.sqlite*
