@@ -1,0 +1,39 @@
+{
+  "pedido": "Quiero postularme al puesto de AI Engineer en Pampa AI. ¿Qué tanto encaja mi perfil y qué me falta?",
+  "pasos": [
+    {
+      "nodo": "Supervisor",
+      "mensaje": "Decisión: Investigador. Motivo: No hay oferta investigada y se requiere al menos un requisito para proceder.",
+      "siguiente_agente": "Investigador"
+    },
+    {
+      "nodo": "Investigador",
+      "mensaje": "Oferta encontrada: AI Engineer Jr. (remoto, Argentina) en Pampa AI. Requisitos: ['Python', 'LangChain', 'LangGraph', 'RAG', 'FastAPI', 'Docker', 'Inglés avanzado']",
+      "pasos": 1
+    },
+    {
+      "nodo": "Supervisor",
+      "mensaje": "Decisión: Analista. Motivo: Ya existe una oferta investigada con sus respectivos requisitos, pero todavia no se realizo el analisis de coincidencia.",
+      "siguiente_agente": "Analista"
+    },
+    {
+      "nodo": "Analista",
+      "mensaje": "Coincidencia: 71.4%. Faltan: ['FastAPI', 'Docker']",
+      "pasos": 2
+    },
+    {
+      "nodo": "Supervisor",
+      "mensaje": "Decisión: FINALIZAR. Motivo: Ya existe una oferta investigada con requisitos y un análisis de coincidencia completo sobre la misma, sin errores de validación pendientes.",
+      "siguiente_agente": "FINALIZAR"
+    },
+    {
+      "nodo": "Validador",
+      "errores_de_validacion": [],
+      "tarea_completada": true
+    },
+    {
+      "nodo": "Sintesis",
+      "mensaje": "AI Engineer Jr. (remoto, Argentina) en Pampa AI: tu perfil cumple el 71.4% de los requisitos obligatorios.\nCumplís: Python, LangChain, LangGraph, RAG, Inglés avanzado.\nTe falta: FastAPI, Docker.\nDeseables que ya tenés: ninguno.\nRecomendación: Repasá FastAPI y Docker antes de enviar tu postulación para cubrir los requisitos faltantes."
+    }
+  ]
+}
