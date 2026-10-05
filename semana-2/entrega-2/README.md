@@ -17,12 +17,25 @@ y detección de respuestas truncadas (`finish_reason`).
 | Archivo | Qué contiene |
 |---|---|
 | `schemas.py` | `NivelDeCriticidad` (Enum baja/media/alta) y `EntidadesTecnicas` (modelo Pydantic con validador: la lista de tecnologías no puede quedar vacía, se limpian espacios y duplicados) |
-| `chain.py` | `ChatPromptTemplate` (roles system + human, variables `{texto}` e `{instrucciones_de_formato}`), modelo `ChatOpenAI` con `temperature=0`, cadena LCEL `prompt \| modelo.with_structured_output(EntidadesTecnicas)`, `.with_retry()`, `.with_fallbacks()` y la función async `extraer_entidades_tecnicas_desde_texto()` |
+| `chain.py` | `ChatPromptTemplate` (roles system + human, variables `{texto}` e `{instrucciones_de_formato}`), modelo `ChatOpenAI` con `temperature=0`, cadena LCEL `prompt \| modelo.with_structured_output(EntidadesTecnicas)`, `.with_retry()`, `.with_fallbacks()` y la función async `process_text()` |
 | `main.py` | Script de prueba async (4 escenarios, ver abajo). Guarda los logs en `evidencia_de_ejecucion.log` |
 | `generar_diagrama.py` | Genera los dos diagramas PNG con `get_graph().draw_mermaid_png()` |
 
-> La consigna llama a la función `process_text`. Acá se llama `extraer_entidades_tecnicas_desde_texto`
-> (nombre descriptivo en español: dice qué entra y qué sale). Hace exactamente lo mismo: `await cadena.ainvoke(...)`.
+> La función pedida por la consigna es `process_text(text: str)` (en `chain.py`). Llama a
+> `extraer_entidades_tecnicas_desde_texto`, que ejecuta la cadena con `await cadena.ainvoke(...)`.
+
+## Ejemplo de salida
+
+Entrada: *"Nuestra API en FastAPI está devolviendo timeouts intermitentes. El caché en Redis se satura
+en picos de tráfico y las conexiones a PostgreSQL se agotan [...] Esto está afectando a usuarios en producción."*
+
+```json
+{
+  "tecnologias": ["FastAPI", "Redis", "PostgreSQL"],
+  "nivel_de_criticidad": "alta",
+  "resumen_tecnico": "API en FastAPI con timeouts por saturación de Redis y agotamiento del pool de conexiones de PostgreSQL, afectando producción."
+}
+```
 
 ## Setup
 
@@ -51,7 +64,7 @@ uv run python semana-2/entrega-2/generar_diagrama.py   # opcional, regenera los 
 ## Escenarios de la prueba
 
 1. **Validador Pydantic** sin llamar al modelo: una lista de tecnologías vacía es rechazada; los duplicados se limpian.
-2. **Dos textos limpios en paralelo** con `asyncio.gather` (un log de producción y la arquitectura de un detector de estafas).
+2. **Dos textos limpios en paralelo** con `asyncio.gather` (un log de producción y una descripción de arquitectura).
 3. **Prueba de estrés**: un texto ambiguo sin tecnologías claras. O el modelo se recupera, o el validador rechaza y se reintenta; el programa nunca crashea.
 4. **Respuesta truncada**: el modelo principal tiene solo 15 tokens → `finish_reason=length` → se detecta, se reintenta 3 veces y el **modelo de respaldo** rescata la respuesta.
 

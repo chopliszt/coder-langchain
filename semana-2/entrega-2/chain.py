@@ -153,3 +153,7 @@ async def extraer_entidades_tecnicas_desde_texto(
     except Exception as error_inesperado:
         registro.error("Error no recuperable (%s): %s", type(error_inesperado).__name__, error_inesperado)
         return None
+
+
+async def process_text(text: str) -> EntidadesTecnicas | None:
+    return await extraer_entidades_tecnicas_desde_texto(text)
