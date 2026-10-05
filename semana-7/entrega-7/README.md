@@ -101,6 +101,18 @@ Salida completa: [`salida_prueba_de_carga.txt`](salida_prueba_de_carga.txt). Cap
 | Latencia de punta a punta p50 / **p95** | 166 s / **196 s** |
 | **Costo por ejecución** (calculado por LangSmith) | **~US$ 0,0023** (≈ 4.200 tokens, precio de lista de Gemini 3.5 Flash-Lite) |
 
+### Capturas del dashboard (LangSmith)
+
+| Captura | Qué muestra |
+|---|---|
+| ![Trazas](screenshots/01_trazas.png) | **Trazas activas**: las 5 ejecuciones concurrentes (`trabajo_del_orquestador`) y sus reanudaciones tras la aprobación humana, con la latencia de cada una |
+| ![Costo](screenshots/02_costo_por_ejecucion.png) | **Costo por ejecución**: LangSmith calcula **US$ 0,0022927** a partir de 4.203 tokens de entrada y salida; a la derecha, las decisiones del Supervisor y los aportes de cada agente |
+| ![HITL](screenshots/03_aprobacion_humana.png) | **Human-in-the-loop**: la reanudación con `aprobado: true` pasa por `AprobacionHumana` y recién ahí ejecuta `EnviarPostulacion` |
+| ![Latencia](screenshots/04_latencia_p50_p99.png) | **Latencia** de las trazas (P50 y P99) |
+
+> **Sobre el p95:** el gráfico de LangSmith muestra P50 y P99. Con 5 ejecuciones, el p95 y el p99 son la misma
+> traza (la más lenta, ~196 s), que coincide con el **p95 = 195,9 s** medido por el script de carga.
+
 ### Lectura del dashboard: ¿dónde se va el tiempo y los tokens?
 
 Promedios por nodo del grafo, sacados de las trazas de LangSmith:
