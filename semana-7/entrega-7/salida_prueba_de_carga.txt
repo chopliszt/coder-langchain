@@ -1,0 +1,23 @@
+[3] creado 92994807-f6e1-492d-a723-fb64354c9953 en 0.03s (la API no se bloquea)
+[5] creado 6f886cde-de7d-4cb5-9456-348b532b4c8c en 0.03s (la API no se bloquea)
+[2] creado f51677b4-a362-4e8c-8bfe-8257d3ab7ecb en 0.03s (la API no se bloquea)
+[1] creado bf725164-ca57-43fa-b799-998c64346b4e en 0.03s (la API no se bloquea)
+[4] creado 258dbb39-5a63-4961-95e6-71eaf956ede9 en 0.03s (la API no se bloquea)
+[3] DONE en 102.5s
+[1] pausa HITL: {'accion_critica': 'enviar_postulacion', 'motivo': 'Enviar una postulación es una acción con efectos externos: requiere aprobación humana.', 'empresa': 'Pampa AI', 'puesto': 'AI Engineer Jr.', 'porcentaje_de_coincidencia': 71.4} -> se aprueba
+[1] DONE en 156.7s
+[4] pausa HITL: {'accion_critica': 'enviar_postulacion', 'motivo': 'Enviar una postulación es una acción con efectos externos: requiere aprobación humana.', 'empresa': 'Pampa AI', 'puesto': 'AI Engineer Jr.', 'porcentaje_de_coincidencia': 71.4} -> se aprueba
+[4] DONE en 180.8s
+[5] pausa HITL: {'accion_critica': 'enviar_postulacion', 'motivo': 'Enviar una postulación es una acción con efectos externos: requiere aprobación humana.', 'empresa': 'Nimbus Edu', 'puesto': 'Learning Engineer', 'porcentaje_de_coincidencia': 83.3} -> se aprueba
+[5] DONE en 186.8s
+[2] pausa HITL: {'accion_critica': 'enviar_postulacion', 'motivo': 'Enviar una postulación es una acción con efectos externos: requiere aprobación humana.', 'empresa': 'Nimbus Edu', 'puesto': 'Learning Engineer', 'porcentaje_de_coincidencia': 83.3} -> se aprueba
+[2] DONE en 207.8s
+
+=== Resumen de la prueba de carga (medido desde el cliente) ===
+  [1] DONE      156.7s  job_id=bf725164-ca57-43fa-b799-998c64346b4e
+  [2] DONE      207.8s  job_id=f51677b4-a362-4e8c-8bfe-8257d3ab7ecb
+  [3] DONE      102.5s  job_id=92994807-f6e1-492d-a723-fb64354c9953
+  [4] DONE      180.8s  job_id=258dbb39-5a63-4961-95e6-71eaf956ede9
+  [5] DONE      186.8s  job_id=6f886cde-de7d-4cb5-9456-348b532b4c8c
+  Latencia p50: 180.8s | p95: 207.8s
+  Costo por ejecución y latencia p95: ver el proyecto en https://smith.langchain.com
