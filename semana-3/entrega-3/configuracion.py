@@ -21,4 +21,4 @@ CANTIDAD_DE_FRAGMENTOS_A_RECUPERAR: int = 4
 
 @lru_cache(maxsize=1)
 def obtener_modelo_de_embeddings_compartido() -> HuggingFaceEmbeddings:
-    return HuggingFaceEmbeddings(model_name=NOMBRE_DEL_MODELO_DE_EMBEDDINGS)
+    return HuggingFaceEmbeddings(model_name=NOMBRE_DEL_MODELO_DE_EMBEDDINGS, model_kwargs={"device": "cpu"})

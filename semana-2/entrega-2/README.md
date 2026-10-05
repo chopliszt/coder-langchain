@@ -64,7 +64,7 @@ O con pip: `pip install -r requirements.txt`.
 |---|---|
 | `PROVEEDOR_LLM` | `gemini` (por defecto), `openai` o `anthropic` |
 | `GOOGLE_API_KEY` / `OPENAI_API_KEY` / `ANTHROPIC_API_KEY` | La key del proveedor elegido (nunca se commitea) |
-| `MODELO_PRINCIPAL` / `MODELO_DE_RESPALDO` | Opcional. Por defecto en Gemini: `gemini-flash-latest` y `gemini-flash-lite-latest` |
+| `MODELO_PRINCIPAL` / `MODELO_DE_RESPALDO` | Opcional. Por defecto en Gemini: `gemini-flash-lite-latest` y `gemini-2.5-flash-lite` (modelos "lite": más cuota gratuita por día) |
 
 ## Ejecutar
 

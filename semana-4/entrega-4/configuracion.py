@@ -38,7 +38,7 @@ CATEGORIA_Y_ETIQUETAS_POR_DOCUMENTO: dict[str, tuple[str, list[str]]] = {
 
 @lru_cache(maxsize=1)
 def obtener_modelo_de_embeddings_compartido() -> HuggingFaceEmbeddings:
-    return HuggingFaceEmbeddings(model_name=NOMBRE_DEL_MODELO_DE_EMBEDDINGS)
+    return HuggingFaceEmbeddings(model_name=NOMBRE_DEL_MODELO_DE_EMBEDDINGS, model_kwargs={"device": "cpu"})
 
 
 def calcular_dimension_del_modelo_de_embeddings() -> int:

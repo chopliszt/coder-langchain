@@ -14,13 +14,13 @@ class ProveedorDeModelos(str, Enum):
 
 
 MODELOS_PRINCIPALES_POR_PROVEEDOR: dict[ProveedorDeModelos, str] = {
-    ProveedorDeModelos.GEMINI: "gemini-flash-latest",
+    ProveedorDeModelos.GEMINI: "gemini-flash-lite-latest",
     ProveedorDeModelos.OPENAI: "gpt-4.1-mini",
     ProveedorDeModelos.ANTHROPIC: "claude-haiku-4-5",
 }
 
 MODELOS_DE_RESPALDO_POR_PROVEEDOR: dict[ProveedorDeModelos, str] = {
-    ProveedorDeModelos.GEMINI: "gemini-flash-lite-latest",
+    ProveedorDeModelos.GEMINI: "gemini-2.5-flash-lite",
     ProveedorDeModelos.OPENAI: "gpt-4o-mini",
     ProveedorDeModelos.ANTHROPIC: "claude-sonnet-4-5",
 }
