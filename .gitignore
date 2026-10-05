@@ -15,3 +15,9 @@ context.txt
 # Bases vectoriales locales (se regeneran con ingest.py)
 semana-3/entrega-3/vectorstore/
 semana-5/entrega-5/checkpoints.sqlite*
+
+# Archivos personales (no subir)
+semana-01/imagen_(8).png
+CLAUDE.local.md
+# Documentos reales/privados (ej. manuales IB con copyright)
+**/data_privada/
