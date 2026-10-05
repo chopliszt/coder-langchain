@@ -1,0 +1,90 @@
+18:40:57 | INFO    | ========== 1. Validador Pydantic: lista de tecnologías vacía ==========
+18:40:57 | INFO    | El validador rechazó el objeto, como esperábamos:
+1 validation error for EntidadesTecnicas
+tecnologias
+  Value error, La lista de tecnologías no puede quedar vacía ni contener solo valores de relleno como 'ninguna'. [type=value_error, input_value=['   ', 'ninguna'], input_type=list]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+18:40:57 | INFO    | Limpieza de duplicados y espacios: ['Redis', 'FastAPI']
+18:40:57 | INFO    | ========== 2. Dos textos limpios procesados en paralelo (asyncio.gather) ==========
+18:40:57 | INFO    | Intento de extracción: enviando 237 caracteres al modelo.
+18:40:57 | INFO    | Intento de extracción: enviando 326 caracteres al modelo.
+18:40:57 | WARNING | Direct use of automatic function calling (AFC) in AsyncModels.generate_content is not recommended. Instead, we recommend to use AFC in AsyncChat.send_message. Similarly, direct use of AFC in AsyncModels.generate_content_stream is not recommended. Instead, we recommend to use AFC in AsyncChat.send_message_stream.
+18:41:00 | INFO    | [gemini-3.8-flash] Validación OK (finish_reason=STOP).
+18:41:00 | INFO    | Extracción final: {"tecnologias":["Telegram","Python","FastAPI","LangChain","Gemini","Firestore","Docker","Google Cloud Run"],"nivel_de_criticidad":"baja","resumen_tecnico":"Arquitectura de detección de estafas que utiliza un bot de Telegram integrado con un backend FastAPI, el cual emplea LangChain y Gemini para clasificación. Los datos se persisten en Firestore y el despliegue se gestiona en contenedores Docker sobre Google Cloud Run."}
+18:41:15 | INFO    | [gemini-3.8-flash] Validación OK (finish_reason=STOP).
+18:41:15 | INFO    | Extracción final: {"tecnologias":["FastAPI","Redis","PostgreSQL"],"nivel_de_criticidad":"alta","resumen_tecnico":"La API en FastAPI experimenta timeouts intermitentes debido a la saturación del caché en Redis y al agotamiento del pool de conexiones a PostgreSQL. La degradación afecta directamente a usuarios en el entorno de producción."}
+18:41:15 | INFO    | Resultado:
+{
+  "tecnologias": [
+    "FastAPI",
+    "Redis",
+    "PostgreSQL"
+  ],
+  "nivel_de_criticidad": "alta",
+  "resumen_tecnico": "La API en FastAPI experimenta timeouts intermitentes debido a la saturación del caché en Redis y al agotamiento del pool de conexiones a PostgreSQL. La degradación afecta directamente a usuarios en el entorno de producción."
+}
+18:41:15 | INFO    | Resultado:
+{
+  "tecnologias": [
+    "Telegram",
+    "Python",
+    "FastAPI",
+    "LangChain",
+    "Gemini",
+    "Firestore",
+    "Docker",
+    "Google Cloud Run"
+  ],
+  "nivel_de_criticidad": "baja",
+  "resumen_tecnico": "Arquitectura de detección de estafas que utiliza un bot de Telegram integrado con un backend FastAPI, el cual emplea LangChain y Gemini para clasificación. Los datos se persisten en Firestore y el despliegue se gestiona en contenedores Docker sobre Google Cloud Run."
+}
+18:41:15 | INFO    | ========== 3. Prueba de estrés: texto ambiguo y desordenado ==========
+18:41:15 | INFO    | Intento de extracción: enviando 81 caracteres al modelo.
+18:41:42 | WARNING | [gemini-3.8-flash] La respuesta no cumple el esquema Pydantic: Failed to parse EntidadesTecnicas from completion {"tecnologias": ["ninguna"], "nivel_de_criticidad": "media", "resumen_tecnico": "Se reporta una degradación intermitente en la latencia y tiempos de respuesta del sistema sin causa raíz identificada."}. Got: 1 validation error for EntidadesTecnicas
+tecnologias
+  Value error, La lista de tecnologías no puede quedar vacía ni contener solo valores de relleno como 'ninguna'. [type=value_error, input_value=['ninguna'], input_type=list]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langchain/errors/OUTPUT_PARSING_FAILURE . Se reintenta.
+18:41:44 | INFO    | Intento de extracción: enviando 81 caracteres al modelo.
+18:41:49 | WARNING | [gemini-3.8-flash] La respuesta no cumple el esquema Pydantic: Failed to parse EntidadesTecnicas from completion {"tecnologias": ["ninguna"], "nivel_de_criticidad": "media", "resumen_tecnico": "Se reporta un comportamiento intermitente y degradación de latencia en el sistema sin componentes técnicos ni causas identificadas."}. Got: 1 validation error for EntidadesTecnicas
+tecnologias
+  Value error, La lista de tecnologías no puede quedar vacía ni contener solo valores de relleno como 'ninguna'. [type=value_error, input_value=['ninguna'], input_type=list]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langchain/errors/OUTPUT_PARSING_FAILURE . Se reintenta.
+18:41:51 | INFO    | Intento de extracción: enviando 81 caracteres al modelo.
+18:41:58 | WARNING | [gemini-3.8-flash] La respuesta no cumple el esquema Pydantic: Failed to parse EntidadesTecnicas from completion {"tecnologias": ["ninguna"], "nivel_de_criticidad": "media", "resumen_tecnico": "Se reporta una degradación intermitente en el rendimiento del sistema con latencias variables sin causa identificada. No se especifican componentes técnicos ni servicios concretos afectados."}. Got: 1 validation error for EntidadesTecnicas
+tecnologias
+  Value error, La lista de tecnologías no puede quedar vacía ni contener solo valores de relleno como 'ninguna'. [type=value_error, input_value=['ninguna'], input_type=list]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langchain/errors/OUTPUT_PARSING_FAILURE . Se reintenta.
+18:41:58 | INFO    | Intento de extracción: enviando 81 caracteres al modelo.
+18:42:27 | INFO    | [gemini-3.5-flash-lite] Validación OK (finish_reason=STOP).
+18:42:27 | INFO    | Extracción final: {"tecnologias":["sistema"],"nivel_de_criticidad":"media","resumen_tecnico":"El sistema presenta problemas de rendimiento intermitentes que afectan su comportamiento habitual desde el día anterior."}
+18:42:27 | INFO    | Resultado:
+{
+  "tecnologias": [
+    "sistema"
+  ],
+  "nivel_de_criticidad": "media",
+  "resumen_tecnico": "El sistema presenta problemas de rendimiento intermitentes que afectan su comportamiento habitual desde el día anterior."
+}
+18:42:27 | INFO    | ========== 4. Respuesta truncada (finish_reason=length) -> reintentos -> modelo de respaldo ==========
+18:42:27 | INFO    | Intento de extracción: enviando 237 caracteres al modelo.
+18:42:34 | WARNING | [gemini-3.8-flash] Respuesta cortada por límite de tokens (finish_reason=MAX_TOKENS). Se reintenta.
+18:42:36 | INFO    | Intento de extracción: enviando 237 caracteres al modelo.
+18:42:52 | WARNING | [gemini-3.8-flash] Respuesta cortada por límite de tokens (finish_reason=MAX_TOKENS). Se reintenta.
+18:42:54 | INFO    | Intento de extracción: enviando 237 caracteres al modelo.
+18:43:14 | WARNING | [gemini-3.8-flash] Respuesta cortada por límite de tokens (finish_reason=MAX_TOKENS). Se reintenta.
+18:43:14 | INFO    | Intento de extracción: enviando 237 caracteres al modelo.
+18:43:15 | INFO    | [gemini-3.5-flash-lite] Validación OK (finish_reason=STOP).
+18:43:15 | INFO    | Extracción final: {"tecnologias":["FastAPI","Redis","PostgreSQL"],"nivel_de_criticidad":"alta","resumen_tecnico":"La API experimenta timeouts intermitentes debido a la saturacion de Redis y el agotamiento de conexiones en PostgreSQL durante picos de trafico en produccion."}
+18:43:15 | INFO    | Resultado:
+{
+  "tecnologias": [
+    "FastAPI",
+    "Redis",
+    "PostgreSQL"
+  ],
+  "nivel_de_criticidad": "alta",
+  "resumen_tecnico": "La API experimenta timeouts intermitentes debido a la saturacion de Redis y el agotamiento de conexiones en PostgreSQL durante picos de trafico en produccion."
+}

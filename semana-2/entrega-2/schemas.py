@@ -2,6 +2,8 @@ from enum import Enum
 
 from pydantic import BaseModel, Field, field_validator
 
+VALORES_DE_RELLENO_QUE_NO_SON_TECNOLOGIAS: set[str] = {"ninguna", "ninguno", "n/a", "na", "desconocido", "desconocida", "no especificado", "none"}
+
 
 class NivelDeCriticidad(str, Enum):
     BAJA = "baja"
@@ -28,9 +30,11 @@ class EntidadesTecnicas(BaseModel):
     @classmethod
     def limpiar_tecnologias_y_rechazar_lista_vacia(cls, tecnologias_recibidas: list[str]) -> list[str]:
         tecnologias_sin_espacios: list[str] = [
-            tecnologia.strip() for tecnologia in tecnologias_recibidas if tecnologia.strip()
+            tecnologia.strip()
+            for tecnologia in tecnologias_recibidas
+            if tecnologia.strip() and tecnologia.strip().lower() not in VALORES_DE_RELLENO_QUE_NO_SON_TECNOLOGIAS
         ]
         if not tecnologias_sin_espacios:
-            raise ValueError("La lista de tecnologías no puede quedar vacía.")
+            raise ValueError("La lista de tecnologías no puede quedar vacía ni contener solo valores de relleno como 'ninguna'.")
         tecnologias_sin_duplicados: list[str] = list(dict.fromkeys(tecnologias_sin_espacios))
         return tecnologias_sin_duplicados

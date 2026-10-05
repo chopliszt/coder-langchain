@@ -40,7 +40,7 @@ def configurar_registro_en_consola_y_archivo() -> None:
             logging.FileHandler(RUTA_DEL_ARCHIVO_DE_EVIDENCIA, mode="w", encoding="utf-8"),
         ],
     )
-    for nombre_de_libreria_ruidosa in ("httpx", "openai", "httpcore"):
+    for nombre_de_libreria_ruidosa in ("httpx", "openai", "httpcore", "google_genai", "anthropic"):
         logging.getLogger(nombre_de_libreria_ruidosa).setLevel(logging.WARNING)
 
 
@@ -58,7 +58,7 @@ def mostrar_resultado(entidades: EntidadesTecnicas | None) -> None:
 def probar_validador_de_pydantic_sin_llamar_al_modelo() -> None:
     mostrar_titulo("1. Validador Pydantic: lista de tecnologías vacía")
     try:
-        EntidadesTecnicas(tecnologias=["   ", ""], nivel_de_criticidad="alta", resumen_tecnico="Texto de prueba suficientemente largo.")
+        EntidadesTecnicas(tecnologias=["   ", "ninguna"], nivel_de_criticidad="alta", resumen_tecnico="Texto de prueba suficientemente largo.")
     except ValidationError as error_de_validacion:
         logging.getLogger("demo").info("El validador rechazó el objeto, como esperábamos:\n%s", error_de_validacion)
 
