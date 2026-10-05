@@ -1,0 +1,44 @@
+Usuario [postulaciones-demo]: ¿En qué estado está mi postulación a Pampa AI y cuál es el próximo paso?
+  -> El agente decide usar: buscar_empresa_por_nombre({'nombre_de_la_empresa': 'Pampa AI'})
+  <- buscar_empresa_por_nombre devuelve: Empresa encontrada: 'pampa ai' -> empresa_id=101
+  -> El agente decide usar: buscar_postulaciones_de_la_empresa({'empresa_id': 101})
+  <- buscar_postulaciones_de_la_empresa devuelve: - AI Engineer Jr. | postulado el 2026-09-02 | estado: entrevista técnica agendada | próximo paso: Entrevista técnica el 2026-10-09 a las 15:00 (live coding en Python + LangChain) | Recruiter: Sofía M.
+  Respuesta: Tu postulación a **AI Engineer Jr.** en Pampa AI está en estado **entrevista técnica agendada**. 
+
+El próximo paso es la entrevista técnica el **09/10/2026 a las 15:00** (live coding en Python + LangChain). La recruiter es Sofía M.
+  (herramientas llamadas en este turno: 2 | mensajes acumulados en el hilo: 6)
+
+Usuario [postulaciones-demo]: ¿Y quién es mi contacto ahí?
+  Respuesta: Tu contacto en Pampa AI es **Sofía M.** (Recruiter).
+  (herramientas llamadas en este turno: 0 | mensajes acumulados en el hilo: 8)
+
+Usuario [postulaciones-reintento]: ¿Cómo van mis postulaciones en Nimbus?
+  -> El agente decide usar: buscar_empresa_por_nombre({'nombre_de_la_empresa': 'Nimbus'})
+  <- buscar_empresa_por_nombre devuelve: ERROR: no hay una empresa llamada exactamente 'Nimbus'. Nombres parecidos registrados: ['nimbus edu'].
+  -> El agente decide usar: buscar_empresa_por_nombre({'nombre_de_la_empresa': 'nimbus edu'})
+  <- buscar_empresa_por_nombre devuelve: Empresa encontrada: 'nimbus edu' -> empresa_id=102
+  -> El agente decide usar: buscar_postulaciones_de_la_empresa({'empresa_id': 102})
+  <- buscar_postulaciones_de_la_empresa devuelve: - Product Manager de IA educativa | postulado el 2026-08-20 | estado: rechazada | próximo paso: Ninguno. Feedback recibido: buscaban más experiencia en métricas de producto. | Talent team
+- Learning Engineer | postulado el 2026-09-15 | estado: en revisión de CV | próximo paso: Esperar respuesta; hacer seguimiento por mail el 2026-10-06 si no hay novedades | Hiring manager: Diego R.
+  Respuesta: Tus postulaciones en **Nimbus Edu** son las siguientes:
+
+1. **Product Manager de IA educativa**
+   * **Fecha:** 20/08/2026
+   * **Estado:** Rechazada
+   * **Próximo paso:** Ninguno (Feedback: buscaban más experiencia en métricas de producto).
+   * **Contacto:** Talent team
+
+2. **Learning Engineer**
+   * **Fecha:** 15/09/2026
+   * **Estado:** En revisión de CV
+   * **Próximo paso:** Esperar respuesta; hacer seguimiento por mail el 06/10/2026 si no hay novedades.
+   * **Contacto:** Diego R. (Hiring manager)
+  (herramientas llamadas en este turno: 3 | mensajes acumulados en el hilo: 8)
+
+Usuario [postulaciones-aclaracion]: ¿Me respondieron de Globant?
+  -> El agente decide usar: buscar_empresa_por_nombre({'nombre_de_la_empresa': 'Globant'})
+  <- buscar_empresa_por_nombre devuelve: ERROR: no hay ninguna empresa registrada con un nombre parecido a 'Globant'. Pedile al usuario que confirme el nombre.
+  Respuesta: No tengo registrada ninguna empresa con el nombre "Globant". ¿Podrías confirmarme el nombre de la empresa o revisar si se llama diferente?
+  (herramientas llamadas en este turno: 1 | mensajes acumulados en el hilo: 4)
+
+Traza guardada en traza_de_ejecucion.json y traza_de_ejecucion.log

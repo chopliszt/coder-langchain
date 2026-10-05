@@ -1,0 +1,144 @@
+{
+  "1_razonamiento_multi_paso": [
+    {
+      "tipo": "HumanMessage",
+      "contenido": "¿En qué estado está mi postulación a Pampa AI y cuál es el próximo paso?"
+    },
+    {
+      "tipo": "AIMessage",
+      "contenido": "",
+      "decide_llamar_a": [
+        {
+          "herramienta": "buscar_empresa_por_nombre",
+          "argumentos": {
+            "nombre_de_la_empresa": "Pampa AI"
+          }
+        }
+      ]
+    },
+    {
+      "tipo": "ToolMessage",
+      "contenido": "Empresa encontrada: 'pampa ai' -> empresa_id=101",
+      "herramienta": "buscar_empresa_por_nombre"
+    },
+    {
+      "tipo": "AIMessage",
+      "contenido": "",
+      "decide_llamar_a": [
+        {
+          "herramienta": "buscar_postulaciones_de_la_empresa",
+          "argumentos": {
+            "empresa_id": 101
+          }
+        }
+      ]
+    },
+    {
+      "tipo": "ToolMessage",
+      "contenido": "- AI Engineer Jr. | postulado el 2026-09-02 | estado: entrevista técnica agendada | próximo paso: Entrevista técnica el 2026-10-09 a las 15:00 (live coding en Python + LangChain) | Recruiter: Sofía M.",
+      "herramienta": "buscar_postulaciones_de_la_empresa"
+    },
+    {
+      "tipo": "AIMessage",
+      "contenido": "Tu postulación a **AI Engineer Jr.** en Pampa AI está en estado **entrevista técnica agendada**. \n\nEl próximo paso es la entrevista técnica el **09/10/2026 a las 15:00** (live coding en Python + LangChain). La recruiter es Sofía M."
+    }
+  ],
+  "2_memoria_mismo_thread_id": [
+    {
+      "tipo": "HumanMessage",
+      "contenido": "¿Y quién es mi contacto ahí?"
+    },
+    {
+      "tipo": "AIMessage",
+      "contenido": "Tu contacto en Pampa AI es **Sofía M.** (Recruiter)."
+    }
+  ],
+  "3_error_y_segundo_intento": [
+    {
+      "tipo": "HumanMessage",
+      "contenido": "¿Cómo van mis postulaciones en Nimbus?"
+    },
+    {
+      "tipo": "AIMessage",
+      "contenido": "",
+      "decide_llamar_a": [
+        {
+          "herramienta": "buscar_empresa_por_nombre",
+          "argumentos": {
+            "nombre_de_la_empresa": "Nimbus"
+          }
+        }
+      ]
+    },
+    {
+      "tipo": "ToolMessage",
+      "contenido": "ERROR: no hay una empresa llamada exactamente 'Nimbus'. Nombres parecidos registrados: ['nimbus edu'].",
+      "herramienta": "buscar_empresa_por_nombre"
+    },
+    {
+      "tipo": "AIMessage",
+      "contenido": "",
+      "decide_llamar_a": [
+        {
+          "herramienta": "buscar_empresa_por_nombre",
+          "argumentos": {
+            "nombre_de_la_empresa": "nimbus edu"
+          }
+        }
+      ]
+    },
+    {
+      "tipo": "ToolMessage",
+      "contenido": "Empresa encontrada: 'nimbus edu' -> empresa_id=102",
+      "herramienta": "buscar_empresa_por_nombre"
+    },
+    {
+      "tipo": "AIMessage",
+      "contenido": "",
+      "decide_llamar_a": [
+        {
+          "herramienta": "buscar_postulaciones_de_la_empresa",
+          "argumentos": {
+            "empresa_id": 102
+          }
+        }
+      ]
+    },
+    {
+      "tipo": "ToolMessage",
+      "contenido": "- Product Manager de IA educativa | postulado el 2026-08-20 | estado: rechazada | próximo paso: Ninguno. Feedback recibido: buscaban más experiencia en métricas de producto. | Talent team\n- Learning Engineer | postulado el 2026-09-15 | estado: en revisión de CV | próximo paso: Esperar respuesta; hacer seguimiento por mail el 2026-10-06 si no hay novedades | Hiring manager: Diego R.",
+      "herramienta": "buscar_postulaciones_de_la_empresa"
+    },
+    {
+      "tipo": "AIMessage",
+      "contenido": "Tus postulaciones en **Nimbus Edu** son las siguientes:\n\n1. **Product Manager de IA educativa**\n   * **Fecha:** 20/08/2026\n   * **Estado:** Rechazada\n   * **Próximo paso:** Ninguno (Feedback: buscaban más experiencia en métricas de producto).\n   * **Contacto:** Talent team\n\n2. **Learning Engineer**\n   * **Fecha:** 15/09/2026\n   * **Estado:** En revisión de CV\n   * **Próximo paso:** Esperar respuesta; hacer seguimiento por mail el 06/10/2026 si no hay novedades.\n   * **Contacto:** Diego R. (Hiring manager)"
+    }
+  ],
+  "4_error_y_pedido_de_aclaracion": [
+    {
+      "tipo": "HumanMessage",
+      "contenido": "¿Me respondieron de Globant?"
+    },
+    {
+      "tipo": "AIMessage",
+      "contenido": "",
+      "decide_llamar_a": [
+        {
+          "herramienta": "buscar_empresa_por_nombre",
+          "argumentos": {
+            "nombre_de_la_empresa": "Globant"
+          }
+        }
+      ]
+    },
+    {
+      "tipo": "ToolMessage",
+      "contenido": "ERROR: no hay ninguna empresa registrada con un nombre parecido a 'Globant'. Pedile al usuario que confirme el nombre.",
+      "herramienta": "buscar_empresa_por_nombre"
+    },
+    {
+      "tipo": "AIMessage",
+      "contenido": "No tengo registrada ninguna empresa con el nombre \"Globant\". ¿Podrías confirmarme el nombre de la empresa o revisar si se llama diferente?"
+    }
+  ]
+}
