@@ -8,6 +8,18 @@ Si la respuesta no está en los documentos, el sistema responde **"No lo sé"**.
 necesita cada estudiante (dislexia → letra grande, TDAH → consignas de a una, tiempo extra, etc.).
 **Todos los datos son ficticios.**
 
+## Consigna (resumen oficial)
+
+Flujo RAG end-to-end: consulta → búsqueda en base vectorial poblada → respuesta que usa **exclusivamente** esa información.
+
+- [x] Ingesta: lee `/data`, chunking con `RecursiveCharacterTextSplitter` (mínimo 500 tokens, 50 de overlap) y persiste en ChromaDB local
+- [x] Mismo modelo de embeddings para indexar y consultar; verifica si la base ya existe antes de reindexar
+- [x] Retriever con top_k entre 3 y 5 (acá: 4)
+- [x] Cadena LCEL con prompt "filtro de veracidad": dice "No lo sé" si no está en el contexto; salida por `PydanticOutputParser`
+- [x] `get_rag_response(query: str)` async: (a) búsqueda, (b) prompt con fragmentos, (c) LLM async, (d) Pydantic con texto + referencias
+- [x] Dos pruebas: pregunta con respuesta y pregunta trampa
+- [x] Sin API keys en el repo (`.env`)
+
 ![Diagrama del sistema](diagrama_del_sistema_rag.png)
 
 ![Cadena LCEL](diagrama_cadena_lcel.png)
@@ -20,7 +32,8 @@ necesita cada estudiante (dislexia → letra grande, TDAH → consignas de a una
 | `configuracion.py` | Rutas, nombre de la colección, tamaño de fragmentos, top_k y **el único modelo de embeddings** que usan ingesta y consulta |
 | `ingest.py` | Limpia (regex) → fragmenta por **tokens** (500 / 50 de solapamiento, `tiktoken`) → `upsert` en ChromaDB `PersistentClient` (carpeta `./vectorstore`) con **IDs determinísticos** (`archivo::índice::hash`) y metadatos (`fuente`, `indice_del_fragmento`). Si la colección ya existe, **no reindexa** |
 | `schemas.py` | `RespuestaGeneradaPorElModelo` (lo que genera el LLM) y `RespuestaRAG` (respuesta + `fuentes` + cantidad de fragmentos) |
-| `rag_chain.py` | Cadena LCEL completa: `retriever` → contexto → `ChatPromptTemplate` → `ChatOpenAI` → `PydanticOutputParser` (con `.with_retry()`), y la función async `get_rag_response(query)` |
+| `rag_chain.py` | Cadena LCEL completa: `retriever` → contexto → `ChatPromptTemplate` → modelo de chat (Gemini por defecto) → `PydanticOutputParser` (con `.with_retry()`), y la función async `get_rag_response(query)` |
+| `proveedor_de_modelos.py` | Elige el proveedor con `PROVEEDOR_LLM` en `.env`: **gemini** (por defecto), openai o anthropic |
 | `main.py` | Pruebas: *"¿Qué adecuaciones aplico en el examen de Historia de Tomás Ferreyra?"* (está en los documentos) y la **pregunta trampa** *"¿Qué nota sacó Tomás en Matemática?"* (las notas no están). Guarda `evidencia_de_ejecucion.log` |
 | `generar_diagrama.py` | Genera el diagrama PNG |
 
@@ -34,7 +47,7 @@ Desde la raíz del repo:
 
 ```bash
 uv sync                                      # o: pip install -r requirements.txt
-cp semana-3/entrega-3/.env.example .env      # completar OPENAI_API_KEY
+cp semana-3/entrega-3/.env.example .env      # completar GOOGLE_API_KEY (o la del proveedor elegido)
 uv run python semana-3/entrega-3/ingest.py   # indexa (la 2da vez detecta que ya existe)
 uv run python semana-3/entrega-3/main.py     # corre las dos pruebas
 ```

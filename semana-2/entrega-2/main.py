@@ -20,10 +20,11 @@ se satura en picos de tráfico y las conexiones a PostgreSQL se agotan porque el
 está mal dimensionado. Esto está afectando a usuarios en producción.
 """
 
-TEXTO_DE_ARQUITECTURA_DE_SOFTWARE: str = """
-Arquitectura del sistema de pedidos: un frontend en React consume una API REST en Node.js con Express.
-Los pedidos se publican en una cola de RabbitMQ y los procesa un worker en Python. Los datos viven en
-MongoDB y todo se despliega con Docker y Kubernetes en AWS.
+TEXTO_DE_ARQUITECTURA_DETECTOR_DE_ESTAFAS: str = """
+Arquitectura de Sirius, un detector de estafas: un bot de Telegram recibe mensajes
+sospechosos y los envía a un backend en Python con FastAPI. Una cadena de LangChain
+con Gemini clasifica el mensaje como phishing o legítimo, y los resultados se guardan
+en Firestore. Todo corre en contenedores Docker sobre Google Cloud Run.
 """
 
 TEXTO_AMBIGUO_Y_DESORDENADO: str = "el sistema anda medio raro desde ayer, a veces tarda y otras no... ni idea q pasa"
@@ -73,7 +74,7 @@ async def probar_dos_textos_limpios_en_paralelo() -> None:
     mostrar_titulo("2. Dos textos limpios procesados en paralelo (asyncio.gather)")
     resultados: list[EntidadesTecnicas | None] = await asyncio.gather(
         process_text(TEXTO_LIMPIO_LOG_DE_ERROR),
-        extraer_entidades_tecnicas_desde_texto(TEXTO_DE_ARQUITECTURA_DE_SOFTWARE),
+        extraer_entidades_tecnicas_desde_texto(TEXTO_DE_ARQUITECTURA_DETECTOR_DE_ESTAFAS),
     )
     for entidades in resultados:
         mostrar_resultado(entidades)

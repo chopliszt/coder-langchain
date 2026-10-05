@@ -4,19 +4,19 @@ from typing import Any
 
 from langchain_chroma import Chroma
 from langchain_core.documents import Document
+from langchain_core.language_models.chat_models import BaseChatModel
 from langchain_core.output_parsers import PydanticOutputParser
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.runnables import Runnable, RunnableLambda, RunnableParallel, RunnablePassthrough
 from langchain_core.vectorstores import VectorStoreRetriever
-from langchain_openai import ChatOpenAI
 
 from configuracion import (
     CANTIDAD_DE_FRAGMENTOS_A_RECUPERAR,
     CARPETA_DE_LA_BASE_VECTORIAL,
     NOMBRE_DE_LA_COLECCION,
-    NOMBRE_DEL_MODELO_DE_CHAT,
     obtener_modelo_de_embeddings_compartido,
 )
+from proveedor_de_modelos import crear_modelo_de_chat
 from schemas import FRASE_CUANDO_NO_HAY_INFORMACION, FuenteConsultada, RespuestaGeneradaPorElModelo, RespuestaRAG
 
 registro: logging.Logger = logging.getLogger("rag")
@@ -78,7 +78,7 @@ def obtener_buscador_de_fragmentos_en_chroma() -> VectorStoreRetriever:
 
 @lru_cache(maxsize=1)
 def crear_cadena_rag_completa() -> Runnable[str, dict[str, Any]]:
-    modelo_de_chat: ChatOpenAI = ChatOpenAI(model=NOMBRE_DEL_MODELO_DE_CHAT, temperature=0, timeout=30, max_retries=0)
+    modelo_de_chat: BaseChatModel = crear_modelo_de_chat()
 
     cadena_de_generacion_fundamentada: Runnable[dict[str, Any], RespuestaGeneradaPorElModelo] = (
         RunnableLambda(preparar_variables_del_prompt)

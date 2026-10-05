@@ -1,4 +1,3 @@
-import os
 from functools import lru_cache
 from pathlib import Path
 
@@ -13,7 +12,6 @@ CARPETA_DE_LA_BASE_VECTORIAL: Path = CARPETA_DE_ESTA_ENTREGA / "vectorstore"
 NOMBRE_DE_LA_COLECCION: str = "adecuaciones_pedagogicas"
 
 NOMBRE_DEL_MODELO_DE_EMBEDDINGS: str = "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
-NOMBRE_DEL_MODELO_DE_CHAT: str = os.getenv("MODELO_PRINCIPAL_OPENAI", "gpt-4.1-mini")
 
 TOKENS_POR_FRAGMENTO: int = 500
 TOKENS_DE_SOLAPAMIENTO: int = 50
