@@ -90,6 +90,34 @@ imprime la latencia de cada una con p50 y p95. Después, en LangSmith → proyec
 - **Traces**: una traza por ejecución, con cada nodo del grafo (Supervisor, Investigador, Analista...) y sus tokens.
 - **Monitor**: latencia **p95** y **costo** por traza (LangSmith lo calcula con los tokens de entrada y salida).
 
+## Resultados de la prueba de carga (5 peticiones concurrentes)
+
+Salida completa: [`salida_prueba_de_carga.txt`](salida_prueba_de_carga.txt). Capturas: [`screenshots/`](screenshots/).
+
+| Métrica | Valor |
+|---|---|
+| Tiempo de respuesta de `POST /tasks` | ~0,15 s (encola y devuelve el `job_id`, no bloquea) |
+| Trabajos completados | 5 de 5 en `DONE` (4 pasaron por la pausa de aprobación humana) |
+| Latencia de punta a punta p50 / **p95** | 166 s / **196 s** |
+| **Costo por ejecución** (calculado por LangSmith) | **~US$ 0,0023** (≈ 4.200 tokens, precio de lista de Gemini 3.5 Flash-Lite) |
+
+### Lectura del dashboard: ¿dónde se va el tiempo y los tokens?
+
+Promedios por nodo del grafo, sacados de las trazas de LangSmith:
+
+| Nodo | Veces por ejecución | Segundos promedio | Tokens promedio | % del costo |
+|---|---|---|---|---|
+| **Investigador** | 1 | **76,5** | **1.850** | **38%** |
+| Analista | 1 | 32,2 | 1.351 | 35% |
+| Supervisor | 3 | 12,5 (cada vez) | 338 (cada vez) | 27% |
+| Validador, Síntesis, Aprobación humana | 1 | ~0 | 0 | 0% (código, sin LLM) |
+
+- **El Investigador es el cuello de botella**: hace varias llamadas al LLM (buscar oferta → leer oferta → respuesta estructurada).
+- **La latencia está dominada por el límite de pedidos por minuto**: las 5 ejecuciones comparten un limitador de 12 pedidos/minuto
+  (cuota gratuita de Gemini). Una sola ejecución sin competencia tarda ~60 s; con 5 a la vez, ~3 minutos.
+- **Mejoras posibles**: un modelo con más cuota (plan pago), que el Investigador lea la oferta en una sola llamada, y
+  validar y sintetizar con código (como ya se hace) en vez de con LLM.
+
 ## Decisiones de diseño (el "por qué")
 
 - **Worker = `asyncio.create_task`** dentro del mismo proceso: simple y suficiente para esta etapa. Se guardan referencias

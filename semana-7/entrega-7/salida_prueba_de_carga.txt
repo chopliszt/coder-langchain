@@ -1,23 +1,23 @@
-[3] creado 92994807-f6e1-492d-a723-fb64354c9953 en 0.03s (la API no se bloquea)
-[5] creado 6f886cde-de7d-4cb5-9456-348b532b4c8c en 0.03s (la API no se bloquea)
-[2] creado f51677b4-a362-4e8c-8bfe-8257d3ab7ecb en 0.03s (la API no se bloquea)
-[1] creado bf725164-ca57-43fa-b799-998c64346b4e en 0.03s (la API no se bloquea)
-[4] creado 258dbb39-5a63-4961-95e6-71eaf956ede9 en 0.03s (la API no se bloquea)
-[3] DONE en 102.5s
-[1] pausa HITL: {'accion_critica': 'enviar_postulacion', 'motivo': 'Enviar una postulación es una acción con efectos externos: requiere aprobación humana.', 'empresa': 'Pampa AI', 'puesto': 'AI Engineer Jr.', 'porcentaje_de_coincidencia': 71.4} -> se aprueba
-[1] DONE en 156.7s
-[4] pausa HITL: {'accion_critica': 'enviar_postulacion', 'motivo': 'Enviar una postulación es una acción con efectos externos: requiere aprobación humana.', 'empresa': 'Pampa AI', 'puesto': 'AI Engineer Jr.', 'porcentaje_de_coincidencia': 71.4} -> se aprueba
-[4] DONE en 180.8s
-[5] pausa HITL: {'accion_critica': 'enviar_postulacion', 'motivo': 'Enviar una postulación es una acción con efectos externos: requiere aprobación humana.', 'empresa': 'Nimbus Edu', 'puesto': 'Learning Engineer', 'porcentaje_de_coincidencia': 83.3} -> se aprueba
-[5] DONE en 186.8s
+[2] creado 8cdd1483-884d-4f49-a5ca-6e680fada0d3 en 0.14s (la API no se bloquea)
+[1] creado 46f65a4b-2c11-40ff-aaf9-8c188a341fbe en 0.15s (la API no se bloquea)
+[3] creado 9d72deac-7946-456c-9bfd-c4758c645fa3 en 0.15s (la API no se bloquea)
+[5] creado 5f0b2841-1440-4d43-85c3-d12715f5265c en 0.15s (la API no se bloquea)
+[4] creado 520b03ee-edf9-4dd4-8568-f2ceca28d3bd en 0.15s (la API no se bloquea)
+[1] pausa HITL: {'accion_critica': 'enviar_postulacion', 'motivo': 'Enviar una postulación es una acción con efectos externos: requiere aprobación humana.', 'empresa': 'Pampa AI', 'puesto': 'AI Engineer Jr. (remoto, Argentina)', 'porcentaje_de_coincidencia': 71.4} -> se aprueba
+[1] DONE en 57.4s
+[3] DONE en 138.7s
 [2] pausa HITL: {'accion_critica': 'enviar_postulacion', 'motivo': 'Enviar una postulación es una acción con efectos externos: requiere aprobación humana.', 'empresa': 'Nimbus Edu', 'puesto': 'Learning Engineer', 'porcentaje_de_coincidencia': 83.3} -> se aprueba
-[2] DONE en 207.8s
+[2] DONE en 165.8s
+[5] pausa HITL: {'accion_critica': 'enviar_postulacion', 'motivo': 'Enviar una postulación es una acción con efectos externos: requiere aprobación humana.', 'empresa': 'Nimbus Edu', 'puesto': 'Learning Engineer', 'porcentaje_de_coincidencia': 83.3} -> se aprueba
+[4] pausa HITL: {'accion_critica': 'enviar_postulacion', 'motivo': 'Enviar una postulación es una acción con efectos externos: requiere aprobación humana.', 'empresa': 'Pampa AI', 'puesto': 'AI Engineer Jr.', 'porcentaje_de_coincidencia': 71.4} -> se aprueba
+[5] DONE en 192.9s
+[4] DONE en 195.9s
 
 === Resumen de la prueba de carga (medido desde el cliente) ===
-  [1] DONE      156.7s  job_id=bf725164-ca57-43fa-b799-998c64346b4e
-  [2] DONE      207.8s  job_id=f51677b4-a362-4e8c-8bfe-8257d3ab7ecb
-  [3] DONE      102.5s  job_id=92994807-f6e1-492d-a723-fb64354c9953
-  [4] DONE      180.8s  job_id=258dbb39-5a63-4961-95e6-71eaf956ede9
-  [5] DONE      186.8s  job_id=6f886cde-de7d-4cb5-9456-348b532b4c8c
-  Latencia p50: 180.8s | p95: 207.8s
+  [1] DONE       57.4s  job_id=46f65a4b-2c11-40ff-aaf9-8c188a341fbe
+  [2] DONE      165.8s  job_id=8cdd1483-884d-4f49-a5ca-6e680fada0d3
+  [3] DONE      138.7s  job_id=9d72deac-7946-456c-9bfd-c4758c645fa3
+  [4] DONE      195.9s  job_id=520b03ee-edf9-4dd4-8568-f2ceca28d3bd
+  [5] DONE      192.9s  job_id=5f0b2841-1440-4d43-85c3-d12715f5265c
+  Latencia p50: 165.8s | p95: 195.9s
   Costo por ejecución y latencia p95: ver el proyecto en https://smith.langchain.com
