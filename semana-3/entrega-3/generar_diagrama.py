@@ -35,5 +35,5 @@ def generar_diagrama_de_la_cadena_lcel() -> None:
 
 if __name__ == "__main__":
     generar_diagrama_de_la_cadena_lcel()
-    draw_mermaid_png(DIAGRAMA_DEL_SISTEMA_EN_MERMAID, output_file_path=str(RUTA_DEL_DIAGRAMA_DEL_SISTEMA))
+    draw_mermaid_png(DIAGRAMA_DEL_SISTEMA_EN_MERMAID.strip(), output_file_path=str(RUTA_DEL_DIAGRAMA_DEL_SISTEMA))
     print(f"Diagrama guardado en {RUTA_DEL_DIAGRAMA_DEL_SISTEMA}")
