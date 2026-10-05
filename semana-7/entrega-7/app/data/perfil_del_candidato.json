@@ -1,0 +1,8 @@
+{
+  "nombre": "Candidato de ejemplo (perfil ficticio)",
+  "habilidades": [
+    "Python", "Kotlin", "JavaScript", "LangChain", "LangGraph", "RAG", "Pydantic",
+    "Machine learning", "Deep learning", "Prompt engineering", "Experiencia docente",
+    "Capacitación de docentes", "Conocimiento del programa IB", "Inglés avanzado"
+  ]
+}

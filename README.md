@@ -8,6 +8,7 @@
 | 4 | RAG escalable en la nube con Pinecone | [`semana-4/entrega-4`](semana-4/entrega-4) |
 | 5 | Agente ReAct con memoria persistente (LangGraph) | [`semana-5/entrega-5`](semana-5/entrega-5) |
 | 6 | Orquestador multi-agente (Supervisor) | [`semana-6/entrega-6`](semana-6/entrega-6) |
+| 7 | API de producción (FastAPI + Redis + LangSmith + HITL) | [`semana-7/entrega-7`](semana-7/entrega-7) |
 
 Cada carpeta tiene su propio `README.md` con instrucciones, diagramas y evidencia.
 Dependencias globales en `pyproject.toml` (`uv sync`). Las API keys van en `.env` (ver `.env.example` de cada entrega).
