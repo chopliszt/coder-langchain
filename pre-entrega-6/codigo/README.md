@@ -39,8 +39,8 @@ START -> Supervisor -> Investigador -> Supervisor -> Analista -> Supervisor -> V
 
 ```bash
 uv sync                                       # o: pip install -r requirements.txt
-cp semana-6/entrega-6/.env.example .env       # completar GOOGLE_API_KEY
-uv run python semana-6/entrega-6/main.py
+cp pre-entrega-6/codigo/.env.example .env       # completar GOOGLE_API_KEY
+uv run python pre-entrega-6/codigo/main.py
 ```
 
 ## ¿Por qué esta topología? (jerárquica, no colaborativa)

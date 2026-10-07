@@ -37,8 +37,8 @@ gracias a un checkpointer SQLite. Los datos son **simulados** (`datos_simulados.
 
 ```bash
 uv sync                                     # o: python3.12 -m venv .venv && pip install -r requirements.txt
-cp semana-5/entrega-5/.env.example .env     # completar GOOGLE_API_KEY
-uv run python semana-5/entrega-5/main.py
+cp pre-entrega-5/codigo/.env.example .env     # completar GOOGLE_API_KEY
+uv run python pre-entrega-5/codigo/main.py
 ```
 
 ## Los 4 turnos de la prueba

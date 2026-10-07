@@ -58,8 +58,8 @@ rechace. Si se rechaza, termina sin enviar. Si la coincidencia es baja, no hay n
 3. **Variables**: copiar `.env.example` a la raíz del repo como `.env` y completar `GOOGLE_API_KEY` y `LANGSMITH_API_KEY`.
 4. **Dependencias y API**:
    ```bash
-   uv sync                                   # o: pip install -r semana-7/entrega-7/requirements.txt
-   cd semana-7/entrega-7/app
+   uv sync                                   # o: pip install -r pre-entrega-7/codigo/requirements.txt
+   cd pre-entrega-7/codigo/app
    uv run uvicorn main:aplicacion --port 8000
    ```
    Documentación interactiva: http://localhost:8000/docs
@@ -82,7 +82,7 @@ curl localhost:8000/tasks/<job_id>               # DONE, postulacion_enviada: tr
 Con la API corriendo, en otra terminal:
 
 ```bash
-uv run python semana-7/entrega-7/lanzar_5_peticiones_concurrentes.py
+uv run python pre-entrega-7/codigo/lanzar_5_peticiones_concurrentes.py
 ```
 
 Lanza 5 tareas a la vez con `asyncio.gather`, consulta su estado, aprueba automáticamente las pausas HITL y al final

@@ -47,12 +47,12 @@ Desde la raíz del repo:
 
 ```bash
 uv sync                                      # o: pip install -r requirements.txt
-cp semana-3/entrega-3/.env.example .env      # completar GOOGLE_API_KEY (o la del proveedor elegido)
-uv run python semana-3/entrega-3/ingest.py   # indexa (la 2da vez detecta que ya existe)
-uv run python semana-3/entrega-3/main.py     # corre las dos pruebas
+cp pre-entrega-3/codigo/.env.example .env      # completar GOOGLE_API_KEY (o la del proveedor elegido)
+uv run python pre-entrega-3/codigo/ingest.py   # indexa (la 2da vez detecta que ya existe)
+uv run python pre-entrega-3/codigo/main.py     # corre las dos pruebas
 ```
 
-`uv run python semana-3/entrega-3/ingest.py --reindexar` fuerza volver a indexar
+`uv run python pre-entrega-3/codigo/ingest.py --reindexar` fuerza volver a indexar
 (gracias a los IDs determinísticos, el `upsert` reemplaza en vez de duplicar).
 
 ## Decisiones de diseño (el "por qué")

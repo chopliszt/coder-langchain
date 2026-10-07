@@ -13,11 +13,11 @@ secrets.json
 context.txt
 
 # Bases vectoriales locales (se regeneran con ingest.py)
-semana-3/entrega-3/vectorstore/
-semana-5/entrega-5/checkpoints.sqlite*
+pre-entrega-3/codigo/vectorstore/
+pre-entrega-5/codigo/checkpoints.sqlite*
 
 # Archivos personales (no subir)
-semana-01/imagen_(8).png
+pre-entrega-1/imagen_(8).png
 CLAUDE.local.md
 # Documentos reales/privados (ej. manuales IB con copyright)
 **/data_privada/

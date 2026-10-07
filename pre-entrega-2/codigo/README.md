@@ -55,7 +55,7 @@ Desde la raíz del repo (usa `uv`):
 
 ```bash
 uv sync
-cp semana-2/entrega-2/.env.example .env   # y completá OPENAI_API_KEY
+cp pre-entrega-2/codigo/.env.example .env   # y completá OPENAI_API_KEY
 ```
 
 O con pip: `pip install -r requirements.txt`.
@@ -69,8 +69,8 @@ O con pip: `pip install -r requirements.txt`.
 ## Ejecutar
 
 ```bash
-uv run python semana-2/entrega-2/main.py
-uv run python semana-2/entrega-2/generar_diagrama.py   # opcional, regenera los PNG
+uv run python pre-entrega-2/codigo/main.py
+uv run python pre-entrega-2/codigo/generar_diagrama.py   # opcional, regenera los PNG
 ```
 
 ## Escenarios de la prueba

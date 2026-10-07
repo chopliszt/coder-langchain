@@ -43,9 +43,9 @@ Serverless** (significado), fusionadas con `EnsembleRetriever`. Se mide con **Re
 3. Instalá dependencias y corré los 3 scripts en orden:
    ```bash
    uv sync                                                  # o: pip install -r requirements.txt
-   uv run python semana-4/entrega-4/inicializar_indice.py   # crea el índice (dimensión 384)
-   uv run python semana-4/entrega-4/ingest.py               # sube los fragmentos al namespace
-   uv run python semana-4/entrega-4/evaluate.py             # imprime Recall@5 y Precision@5
+   uv run python pre-entrega-4/codigo/inicializar_indice.py   # crea el índice (dimensión 384)
+   uv run python pre-entrega-4/codigo/ingest.py               # sube los fragmentos al namespace
+   uv run python pre-entrega-4/codigo/evaluate.py             # imprime Recall@5 y Precision@5
    ```
 4. En la consola de Pinecone vas a ver el índice `manual-ib` con el namespace `manual-ib-colegio` y sus vectores.
 

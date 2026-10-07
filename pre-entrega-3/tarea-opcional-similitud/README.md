@@ -1,6 +1,6 @@
 # Tarea opcional · Clase 3: ¿los embeddings entienden el significado?
 
-[![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/chopliszt/coder-langchain/blob/main/semana-3/tarea-opcional-similitud/similitud_coseno_con_embeddings.ipynb)
+[![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/chopliszt/coder-langchain/blob/main/pre-entrega-3/tarea-opcional-similitud/similitud_coseno_con_embeddings.ipynb)
 
 Compara **TF-IDF** (palabras compartidas) contra **embeddings** (significado) sobre 5 oraciones que hablan del
 despliegue de microservicios con vocabulario distinto y 2 oraciones trampa que comparten palabras clave.
@@ -25,5 +25,5 @@ palabras clave, los embeddings también se tientan con las trampas: por eso exis
 ## Correrlo localmente
 
 ```bash
-uv run --with ipykernel jupyter notebook semana-3/tarea-opcional-similitud/similitud_coseno_con_embeddings.ipynb
+uv run --with ipykernel jupyter notebook pre-entrega-3/tarea-opcional-similitud/similitud_coseno_con_embeddings.ipynb
 ```
