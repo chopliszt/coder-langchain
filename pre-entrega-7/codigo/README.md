@@ -20,7 +20,7 @@ efectos externos (**enviar la postulación**) el grafo se **pausa hasta recibir 
 ## Estructura
 
 ```
-entrega-7/
+pre-entrega-7/codigo/
 ├── app/
 │   ├── main.py            # FastAPI: POST /tasks, GET /tasks/{id}, POST /tasks/{id}/approve, GET /health
 │   ├── graph.py           # orquestador del M6 + nodos HITL + compilación con checkpointer de Redis
@@ -29,6 +29,7 @@ entrega-7/
 │   ├── hitl.py            # detecta la acción crítica, interrupt() y reanudación con Command(resume=...)
 │   ├── state.py, agents/, data/, proveedor_de_modelos.py   # el sistema multi-agente del Módulo 6
 ├── lanzar_5_peticiones_concurrentes.py   # prueba de carga: 5 tareas a la vez, aprueba las pausas, mide p50/p95
+├── docker-compose.yml    # Redis con Docker (alternativa a brew)
 ├── requirements.txt
 ├── .env.example
 └── screenshots/           # capturas del dashboard de LangSmith
@@ -54,6 +55,7 @@ rechace. Si se rechaza, termina sin enviar. Si la coincidencia es baja, no hay n
    brew services start redis
    redis-cli ping                # -> PONG
    ```
+   Con Docker, en vez de brew: `docker compose -f pre-entrega-7/codigo/docker-compose.yml up -d`
 2. **LangSmith**: crear una cuenta gratis en [smith.langchain.com](https://smith.langchain.com) → Settings → API Keys.
 3. **Variables**: copiar `.env.example` a la raíz del repo como `.env` y completar `GOOGLE_API_KEY` y `LANGSMITH_API_KEY`.
 4. **Dependencias y API**:

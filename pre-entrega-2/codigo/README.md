@@ -55,7 +55,7 @@ Desde la raíz del repo (usa `uv`):
 
 ```bash
 uv sync
-cp pre-entrega-2/codigo/.env.example .env   # y completá OPENAI_API_KEY
+cp pre-entrega-2/codigo/.env.example .env   # y completá GOOGLE_API_KEY (u OPENAI_API_KEY con PROVEEDOR_LLM=openai)
 ```
 
 O con pip: `pip install -r requirements.txt`.
