@@ -144,7 +144,7 @@ Con la API levantada, en otra terminal: `cd proyecto-final/codigo && uv run pyth
 Cada pedido se traza en LangSmith (proyecto de `LANGSMITH_PROJECT`) con el `thread_id` de la entrevista como metadato:
 se ve el árbol Supervisor → Investigador → tool de RAG → Entrevistador, con tokens, latencia y costo por nodo.
 
-Capturas en [`screenshots/`](screenshots/).
+Evidencia en [`screenshots/trazas_de_langsmith.md`](screenshots/trazas_de_langsmith.md): las 23 ejecuciones de las 5 pruebas exportadas de LangSmith con el SDK (estado, latencia, tokens y costo por pedido) y el árbol de spans de una ejecución.
 
 ## Estructura
 
