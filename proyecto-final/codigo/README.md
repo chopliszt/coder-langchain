@@ -144,7 +144,18 @@ Con la API levantada, en otra terminal: `cd proyecto-final/codigo && uv run pyth
 Cada pedido se traza en LangSmith (proyecto de `LANGSMITH_PROJECT`) con el `thread_id` de la entrevista como metadato:
 se ve el árbol Supervisor → Investigador → tool de RAG → Entrevistador, con tokens, latencia y costo por nodo.
 
-Evidencia en [`screenshots/trazas_de_langsmith.md`](screenshots/trazas_de_langsmith.md): las 23 ejecuciones de las 5 pruebas exportadas de LangSmith con el SDK (estado, latencia, tokens y costo por pedido) y el árbol de spans de una ejecución.
+Capturas del dashboard de LangSmith (las 5 pruebas: 23 trazas, 0 % de error, costo total USD 0,015):
+
+| Captura | Qué muestra |
+|---|---|
+| [1. Resumen del proyecto](screenshots/1_resumen_del_proyecto_en_langsmith.png) | 23 trazas, costo, tasa de error, latencia p50 y p99, tokens |
+| [2. Actividad, modelos y tools](screenshots/2_actividad_latencia_costo_y_tool_de_rag.png) | 23 ok / 0 fallidas, 50 llamadas al modelo y 7 a la tool de RAG `buscar_contexto_del_puesto_en_los_documentos` |
+| [3. Lista de trazas](screenshots/3_lista_de_trazas_de_las_5_pruebas.png) | Cada pedido a la API como una traza `entrevista` |
+| [4. Árbol de una entrevista](screenshots/4_arbol_de_una_entrevista_supervisor_investigador_rag.png) | Supervisor → Investigador → modelo → tool de RAG → Supervisor, agrupado por `thread_id`, y el estado inicial |
+
+![Árbol de una entrevista en LangSmith](screenshots/4_arbol_de_una_entrevista_supervisor_investigador_rag.png)
+
+Además, [`screenshots/trazas_de_langsmith.md`](screenshots/trazas_de_langsmith.md) tiene las 23 ejecuciones exportadas con el SDK (estado, latencia, tokens y costo por pedido).
 
 ## Estructura
 
