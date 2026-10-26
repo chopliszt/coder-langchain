@@ -1,4 +1,18 @@
-# AI Engineering · Pre-entregas 1 a 7
+# AI Engineering · Proyecto final + Pre-entregas 1 a 7
+
+## ⭐ Entrega final: Entrevistador de postulaciones → [`proyecto-final/codigo`](proyecto-final/codigo)
+
+Sistema completo (RAG + Supervisor multi-agente + API FastAPI + checkpointer en Redis + trazas en LangSmith) que te
+entrevista sobre las preguntas largas de un formulario de postulación y arma el borrador **solo con tus propias frases**.
+README con diagrama del grafo, decisiones de arquitectura y las 5 pruebas: [`proyecto-final/codigo/README.md`](proyecto-final/codigo/README.md).
+
+```bash
+cp .env.example .env    # completar las keys
+./run.sh                # levanta Redis, indexa los documentos y arranca la API en http://localhost:8000/docs
+```
+
+---
+
 
 > **Para quien corrige:** las **7 pre-entregas están completas** en este repo, cada una en su carpeta
 > `pre-entrega-N/codigo/`. Las carpetas antes se llamaban `semana-N/entrega-N`; se renombraron para coincidir con

@@ -1,0 +1,57 @@
+
+=== 1. Por qué la empresa, respuestas completas (a7c62bdb-8abc-4c9b-b30c-89421e18c7c8)
+  Entrevistador: ¿Qué te atrae específicamente de la propuesta de Nimbus Edu para sumarte al equipo?
+  Candidata: Fui profesora de Física siete años en un colegio IB y vi de cerca cómo la IA podía ayudar o arruinar el pensamiento crítico de los alumnos. Me gusta que Nimbus diga que el alumno piensa primero y la IA ayuda después, porque es lo mismo que yo pedía en mis clases.
+  BORRADOR (¿Por qué querés trabajar en Nimbus Edu?):
+    Fui profesora de Física siete años en un colegio IB y vi de cerca cómo la IA podía ayudar o arruinar el pensamiento crítico de los alumnos. Me gusta que Nimbus diga que el alumno piensa primero y la IA ayuda después, porque es lo mismo que yo pedía en mis clases.
+
+=== 2. Respuestas vagas: el entrevistador tiene que repreguntar (e3cdf6b7-27ea-4e5a-98a5-6fe1081cb34f)
+  Entrevistador: ¿Cómo organizaste esa capacitación para los docentes y qué hicieron en la práctica?
+  Candidata: Sí, eso lo hice varias veces en el colegio.
+  Entrevistador: Cuando mencionás que 'lo hice varias veces', ¿podrías contarme los detalles de alguna de esas ocasiones?
+  Candidata: Fue con la plataforma de aprendizaje nueva, en 2021. Al principio la mitad de los docentes no la usaba.
+  Entrevistador: Cuando decís que 'la mitad de los docentes no la usaba', ¿cómo hiciste para involucrarlos en la práctica durante esa capacitación?
+  Candidata: Hice talleres cortos por departamento y nombré a un docente referente en cada uno. En seis meses 36 de los 40 docentes la usaban todas las semanas.
+  BORRADOR (Contanos de una vez que ayudaste a un grupo de docentes a adoptar una herramienta nueva.):
+    Fue con la plataforma de aprendizaje nueva, en 2021. Al principio la mitad de los docentes no la usaba. Hice talleres cortos por departamento y nombré a un docente referente en cada uno. En seis meses 36 de los 40 docentes la usaban todas las semanas.
+
+=== 3. Otra empresa: el RAG tiene que filtrar por metadatos de Pampa AI (dcfdf52c-887a-47e0-baa6-16fc77938047)
+  Entrevistador: ¿Qué te atrae específicamente de los proyectos que hacemos en Pampa AI?
+  Candidata: Porque el 60 por ciento de sus clientes son instituciones educativas y yo vengo de la educación. Entiendo cómo piensa un colegio cuando compra tecnología.
+  BORRADOR (¿Por qué querés trabajar en Pampa AI?):
+    Porque el 60 por ciento de sus clientes son instituciones educativas y yo vengo de la educación. Entiendo cómo piensa un colegio cuando compra tecnología.
+
+=== 4. Proyecto técnico con LLMs (17d2d186-402c-4208-b7ce-586ff76e5489)
+  Entrevistador: ¿Podrías contarme sobre algún proyecto con LLMs que hayas construido y qué problema buscabas resolver?
+  Candidata: Construí un asistente con RAG que responde preguntas de docentes sobre el reglamento del colegio, con LangChain y Chroma.
+  Entrevistador: Cuando mencionás que construiste el asistente para responder sobre el reglamento, ¿qué fue lo que más te costó resolver y qué aprendiste de ese error?
+  Candidata: El problema era que los docentes mandaban las mismas preguntas por mail a coordinación. El asistente responde citando el artículo del reglamento y si no sabe dice no lo sé.
+  Entrevistador: Cuando mencionás que el asistente 'si no sabe dice no lo sé', ¿cómo mediste si realmente evitaba inventar información y qué resultado obtuviste?
+  Candidata: Aprendí que el tamaño de los fragmentos cambia todo: con fragmentos muy grandes las respuestas mezclaban artículos.
+  BORRADOR (Contanos de un proyecto con LLMs que hayas construido: qué problema resolvía y qué aprendiste.):
+    Construí un asistente con RAG que responde preguntas de docentes sobre el reglamento del colegio, con LangChain y Chroma. El problema era que los docentes mandaban las mismas preguntas por mail a coordinación. El asistente responde citando el artículo del reglamento y si no sabe dice no lo sé. Aprendí que el tamaño de los fragmentos cambia todo: con fragmentos muy grandes las respuestas mezclaban artículos.
+
+=== 5. Dos preguntas en la misma entrevista (avanza de pregunta y vuelve a investigar) (604b049b-5b8f-4d8a-a336-6a4f9738a308)
+  Entrevistador: ¿Qué te atrae específicamente de nuestros proyectos en educación?
+  Candidata: Quiero trabajar en Pampa AI porque combina las dos cosas que sé hacer: educación y asistentes con IA.
+  Entrevistador: Cuando mencionás que combina "educación y asistentes con IA", ¿cómo te imaginas aplicando eso en nuestro trabajo diario con las escuelas?
+  Candidata: Me gusta que cada viernes alguien presente un error que cometió. En el colegio hacíamos algo parecido entre docentes y cambió cómo enseñábamos.
+  Entrevistador: Cuando mencionás que "en el colegio hacíamos algo parecido entre docentes", ¿cómo te imaginas que esa experiencia con tus colegas te ayudaría en nuestro equipo?
+  Candidata: Además trabajan en Uruguay y yo vivo en Montevideo, así que conozco a varios de sus clientes.
+  Entrevistador: Hola Ana, contame sobre algún proyecto con LLMs que hayas construido.
+  Candidata: Hice un asistente con RAG para el reglamento del colegio, con LangChain y Chroma.
+  Entrevistador: Cuando mencionás que armaste 'un asistente con RAG para el reglamento del colegio', ¿cómo resolviste las alucinaciones del modelo y qué aprendiste en el proceso?
+  Candidata: Resolvía que coordinación recibía cuarenta mails por semana con las mismas dudas. Bajaron a menos de diez.
+  Entrevistador: Cuando mencionás que las consultas 'bajaron a menos de diez', ¿cómo mediste ese cambio y qué aprendiste sobre el comportamiento del modelo al trabajar con ese volumen?
+  Candidata: Aprendí a medir: armé diez preguntas de prueba y las corría cada vez que cambiaba algo.
+  BORRADOR (¿Por qué querés trabajar en Pampa AI?):
+    Quiero trabajar en Pampa AI porque combina las dos cosas que sé hacer: educación y asistentes con IA. Me gusta que cada viernes alguien presente un error que cometió. Además trabajan en Uruguay y yo vivo en Montevideo, así que conozco a varios de sus clientes.
+  BORRADOR (Contanos de un proyecto con LLMs que hayas construido: qué problema resolvía y qué aprendiste.):
+    Hice un asistente con RAG para el reglamento del colegio, con LangChain y Chroma. Resolvía que coordinación recibía cuarenta mails por semana con las mismas dudas. Bajaron a menos de diez. Aprendí a medir: armé diez preguntas de prueba y las corría cada vez que cambiaba algo.
+
+Evidencia guardada en evidencia_de_las_5_pruebas.json
+- 1. Por qué la empresa, respuestas completas: terminada en 16.8 s, 1 respuestas
+- 2. Respuestas vagas: el entrevistador tiene que repreguntar: terminada en 39.7 s, 3 respuestas
+- 3. Otra empresa: el RAG tiene que filtrar por metadatos de Pampa AI: terminada en 25.2 s, 1 respuestas
+- 4. Proyecto técnico con LLMs: terminada en 40.3 s, 3 respuestas
+- 5. Dos preguntas en la misma entrevista (avanza de pregunta y vuelve a investigar): terminada en 81.1 s, 6 respuestas

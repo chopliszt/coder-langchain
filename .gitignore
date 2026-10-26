@@ -21,3 +21,6 @@ pre-entrega-1/imagen_(8).png
 CLAUDE.local.md
 # Documentos reales/privados (ej. manuales IB con copyright)
 **/data_privada/
+
+# Proyecto final: base vectorial local (se regenera con la ingesta)
+proyecto-final/codigo/base_vectorial/

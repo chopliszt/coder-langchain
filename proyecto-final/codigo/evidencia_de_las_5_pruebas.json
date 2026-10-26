@@ -1,0 +1,233 @@
+[
+  {
+    "prueba": "1. Por qué la empresa, respuestas completas",
+    "identificador_de_la_entrevista": "a7c62bdb-8abc-4c9b-b30c-89421e18c7c8",
+    "estado_final": "terminada",
+    "respuestas_enviadas": 1,
+    "segundos": 16.8,
+    "transcripcion": [
+      {
+        "numero_de_pregunta": 0,
+        "autor": "entrevistador",
+        "texto": "¿Qué te atrae específicamente de la propuesta de Nimbus Edu para sumarte al equipo?"
+      },
+      {
+        "numero_de_pregunta": 0,
+        "autor": "candidato",
+        "texto": "Fui profesora de Física siete años en un colegio IB y vi de cerca cómo la IA podía ayudar o arruinar el pensamiento crítico de los alumnos. Me gusta que Nimbus diga que el alumno piensa primero y la IA ayuda después, porque es lo mismo que yo pedía en mis clases."
+      }
+    ],
+    "borradores_aprobados": [
+      {
+        "numero_de_pregunta": 0,
+        "pregunta_del_formulario": "¿Por qué querés trabajar en Nimbus Edu?",
+        "texto": "Fui profesora de Física siete años en un colegio IB y vi de cerca cómo la IA podía ayudar o arruinar el pensamiento crítico de los alumnos. Me gusta que Nimbus diga que el alumno piensa primero y la IA ayuda después, porque es lo mismo que yo pedía en mis clases.",
+        "fragmentos_descartados": []
+      }
+    ]
+  },
+  {
+    "prueba": "2. Respuestas vagas: el entrevistador tiene que repreguntar",
+    "identificador_de_la_entrevista": "e3cdf6b7-27ea-4e5a-98a5-6fe1081cb34f",
+    "estado_final": "terminada",
+    "respuestas_enviadas": 3,
+    "segundos": 39.7,
+    "transcripcion": [
+      {
+        "numero_de_pregunta": 0,
+        "autor": "entrevistador",
+        "texto": "¿Cómo organizaste esa capacitación para los docentes y qué hicieron en la práctica?"
+      },
+      {
+        "numero_de_pregunta": 0,
+        "autor": "candidato",
+        "texto": "Sí, eso lo hice varias veces en el colegio."
+      },
+      {
+        "numero_de_pregunta": 0,
+        "autor": "entrevistador",
+        "texto": "Cuando mencionás que 'lo hice varias veces', ¿podrías contarme los detalles de alguna de esas ocasiones?"
+      },
+      {
+        "numero_de_pregunta": 0,
+        "autor": "candidato",
+        "texto": "Fue con la plataforma de aprendizaje nueva, en 2021. Al principio la mitad de los docentes no la usaba."
+      },
+      {
+        "numero_de_pregunta": 0,
+        "autor": "entrevistador",
+        "texto": "Cuando decís que 'la mitad de los docentes no la usaba', ¿cómo hiciste para involucrarlos en la práctica durante esa capacitación?"
+      },
+      {
+        "numero_de_pregunta": 0,
+        "autor": "candidato",
+        "texto": "Hice talleres cortos por departamento y nombré a un docente referente en cada uno. En seis meses 36 de los 40 docentes la usaban todas las semanas."
+      }
+    ],
+    "borradores_aprobados": [
+      {
+        "numero_de_pregunta": 0,
+        "pregunta_del_formulario": "Contanos de una vez que ayudaste a un grupo de docentes a adoptar una herramienta nueva.",
+        "texto": "Fue con la plataforma de aprendizaje nueva, en 2021. Al principio la mitad de los docentes no la usaba. Hice talleres cortos por departamento y nombré a un docente referente en cada uno. En seis meses 36 de los 40 docentes la usaban todas las semanas.",
+        "fragmentos_descartados": []
+      }
+    ]
+  },
+  {
+    "prueba": "3. Otra empresa: el RAG tiene que filtrar por metadatos de Pampa AI",
+    "identificador_de_la_entrevista": "dcfdf52c-887a-47e0-baa6-16fc77938047",
+    "estado_final": "terminada",
+    "respuestas_enviadas": 1,
+    "segundos": 25.2,
+    "transcripcion": [
+      {
+        "numero_de_pregunta": 0,
+        "autor": "entrevistador",
+        "texto": "¿Qué te atrae específicamente de los proyectos que hacemos en Pampa AI?"
+      },
+      {
+        "numero_de_pregunta": 0,
+        "autor": "candidato",
+        "texto": "Porque el 60 por ciento de sus clientes son instituciones educativas y yo vengo de la educación. Entiendo cómo piensa un colegio cuando compra tecnología."
+      }
+    ],
+    "borradores_aprobados": [
+      {
+        "numero_de_pregunta": 0,
+        "pregunta_del_formulario": "¿Por qué querés trabajar en Pampa AI?",
+        "texto": "Porque el 60 por ciento de sus clientes son instituciones educativas y yo vengo de la educación. Entiendo cómo piensa un colegio cuando compra tecnología.",
+        "fragmentos_descartados": []
+      }
+    ]
+  },
+  {
+    "prueba": "4. Proyecto técnico con LLMs",
+    "identificador_de_la_entrevista": "17d2d186-402c-4208-b7ce-586ff76e5489",
+    "estado_final": "terminada",
+    "respuestas_enviadas": 3,
+    "segundos": 40.3,
+    "transcripcion": [
+      {
+        "numero_de_pregunta": 0,
+        "autor": "entrevistador",
+        "texto": "¿Podrías contarme sobre algún proyecto con LLMs que hayas construido y qué problema buscabas resolver?"
+      },
+      {
+        "numero_de_pregunta": 0,
+        "autor": "candidato",
+        "texto": "Construí un asistente con RAG que responde preguntas de docentes sobre el reglamento del colegio, con LangChain y Chroma."
+      },
+      {
+        "numero_de_pregunta": 0,
+        "autor": "entrevistador",
+        "texto": "Cuando mencionás que construiste el asistente para responder sobre el reglamento, ¿qué fue lo que más te costó resolver y qué aprendiste de ese error?"
+      },
+      {
+        "numero_de_pregunta": 0,
+        "autor": "candidato",
+        "texto": "El problema era que los docentes mandaban las mismas preguntas por mail a coordinación. El asistente responde citando el artículo del reglamento y si no sabe dice no lo sé."
+      },
+      {
+        "numero_de_pregunta": 0,
+        "autor": "entrevistador",
+        "texto": "Cuando mencionás que el asistente 'si no sabe dice no lo sé', ¿cómo mediste si realmente evitaba inventar información y qué resultado obtuviste?"
+      },
+      {
+        "numero_de_pregunta": 0,
+        "autor": "candidato",
+        "texto": "Aprendí que el tamaño de los fragmentos cambia todo: con fragmentos muy grandes las respuestas mezclaban artículos."
+      }
+    ],
+    "borradores_aprobados": [
+      {
+        "numero_de_pregunta": 0,
+        "pregunta_del_formulario": "Contanos de un proyecto con LLMs que hayas construido: qué problema resolvía y qué aprendiste.",
+        "texto": "Construí un asistente con RAG que responde preguntas de docentes sobre el reglamento del colegio, con LangChain y Chroma. El problema era que los docentes mandaban las mismas preguntas por mail a coordinación. El asistente responde citando el artículo del reglamento y si no sabe dice no lo sé. Aprendí que el tamaño de los fragmentos cambia todo: con fragmentos muy grandes las respuestas mezclaban artículos.",
+        "fragmentos_descartados": []
+      }
+    ]
+  },
+  {
+    "prueba": "5. Dos preguntas en la misma entrevista (avanza de pregunta y vuelve a investigar)",
+    "identificador_de_la_entrevista": "604b049b-5b8f-4d8a-a336-6a4f9738a308",
+    "estado_final": "terminada",
+    "respuestas_enviadas": 6,
+    "segundos": 81.1,
+    "transcripcion": [
+      {
+        "numero_de_pregunta": 0,
+        "autor": "entrevistador",
+        "texto": "¿Qué te atrae específicamente de nuestros proyectos en educación?"
+      },
+      {
+        "numero_de_pregunta": 0,
+        "autor": "candidato",
+        "texto": "Quiero trabajar en Pampa AI porque combina las dos cosas que sé hacer: educación y asistentes con IA."
+      },
+      {
+        "numero_de_pregunta": 0,
+        "autor": "entrevistador",
+        "texto": "Cuando mencionás que combina \"educación y asistentes con IA\", ¿cómo te imaginas aplicando eso en nuestro trabajo diario con las escuelas?"
+      },
+      {
+        "numero_de_pregunta": 0,
+        "autor": "candidato",
+        "texto": "Me gusta que cada viernes alguien presente un error que cometió. En el colegio hacíamos algo parecido entre docentes y cambió cómo enseñábamos."
+      },
+      {
+        "numero_de_pregunta": 0,
+        "autor": "entrevistador",
+        "texto": "Cuando mencionás que \"en el colegio hacíamos algo parecido entre docentes\", ¿cómo te imaginas que esa experiencia con tus colegas te ayudaría en nuestro equipo?"
+      },
+      {
+        "numero_de_pregunta": 0,
+        "autor": "candidato",
+        "texto": "Además trabajan en Uruguay y yo vivo en Montevideo, así que conozco a varios de sus clientes."
+      },
+      {
+        "numero_de_pregunta": 1,
+        "autor": "entrevistador",
+        "texto": "Hola Ana, contame sobre algún proyecto con LLMs que hayas construido."
+      },
+      {
+        "numero_de_pregunta": 1,
+        "autor": "candidato",
+        "texto": "Hice un asistente con RAG para el reglamento del colegio, con LangChain y Chroma."
+      },
+      {
+        "numero_de_pregunta": 1,
+        "autor": "entrevistador",
+        "texto": "Cuando mencionás que armaste 'un asistente con RAG para el reglamento del colegio', ¿cómo resolviste las alucinaciones del modelo y qué aprendiste en el proceso?"
+      },
+      {
+        "numero_de_pregunta": 1,
+        "autor": "candidato",
+        "texto": "Resolvía que coordinación recibía cuarenta mails por semana con las mismas dudas. Bajaron a menos de diez."
+      },
+      {
+        "numero_de_pregunta": 1,
+        "autor": "entrevistador",
+        "texto": "Cuando mencionás que las consultas 'bajaron a menos de diez', ¿cómo mediste ese cambio y qué aprendiste sobre el comportamiento del modelo al trabajar con ese volumen?"
+      },
+      {
+        "numero_de_pregunta": 1,
+        "autor": "candidato",
+        "texto": "Aprendí a medir: armé diez preguntas de prueba y las corría cada vez que cambiaba algo."
+      }
+    ],
+    "borradores_aprobados": [
+      {
+        "numero_de_pregunta": 0,
+        "pregunta_del_formulario": "¿Por qué querés trabajar en Pampa AI?",
+        "texto": "Quiero trabajar en Pampa AI porque combina las dos cosas que sé hacer: educación y asistentes con IA. Me gusta que cada viernes alguien presente un error que cometió. Además trabajan en Uruguay y yo vivo en Montevideo, así que conozco a varios de sus clientes.",
+        "fragmentos_descartados": []
+      },
+      {
+        "numero_de_pregunta": 1,
+        "pregunta_del_formulario": "Contanos de un proyecto con LLMs que hayas construido: qué problema resolvía y qué aprendiste.",
+        "texto": "Hice un asistente con RAG para el reglamento del colegio, con LangChain y Chroma. Resolvía que coordinación recibía cuarenta mails por semana con las mismas dudas. Bajaron a menos de diez. Aprendí a medir: armé diez preguntas de prueba y las corría cada vez que cambiaba algo.",
+        "fragmentos_descartados": []
+      }
+    ]
+  }
+]
